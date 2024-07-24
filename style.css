@@ -1,0 +1,32 @@
+/* Navigation bar */
+
+
+.navbar {
+    width: 80%;
+    background-color: #6eecfff5;
+    overflow: auto;
+    align-items: center;
+  }
+
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #490ce3;
+  }
+
+  .active {
+    background-color: #04AA6D;
+  }
+
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
