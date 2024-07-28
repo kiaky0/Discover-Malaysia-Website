@@ -33,10 +33,11 @@ function showSlides(n) {
 function startAutoSlide() {
     slideInterval = setInterval(function() {
         plusSlides(1);
-    }, 5000); // Change slide every 5 seconds
+    }, 1000); // Change slide every 5 seconds
 }
 
 function resetAutoSlide() {
     clearInterval(slideInterval);
     startAutoSlide();
 }
+
