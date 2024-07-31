@@ -1,82 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>Doscover Malaysia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <title>Doscover Malaysia</title>
 
 </head>
+
 <body>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- navigation bar -->
-    <div class="navbar">
-        <a class="active" href="#">About Malaysia</a> 
-        <a href="#">Experience</a> 
-        <a href="#">Packages</a> 
-        <a href="#">Contact Us</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- navigation bar -->
+  <div class="navbar">
+    <a class="active" href="#">About Malaysia</a>
+    <a href="#">Experience</a>
+    <a href="#">Packages</a>
+    <a href="#">Contact Us</a>
+  </div>
+
+  <!--sliding section-->
+  <section id="first">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="sourceImg/image1.jpg" class="d-block w-100" width="80%" height=400 alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="sourceImg/image2.jpg" class="d-block w-100" width="80%" height=400 alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="sourceImg/image3.jpg" class="d-block w-100" width="80%" height=400 alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+  </section>
 
-    <!--sliding section-->
-    <section id="first">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="sourceImg/image1.jpg" class="d-block w-100" width="80%" height=400 alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="sourceImg/image2.jpg" class="d-block w-100" width="80%" height=400 alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="sourceImg/image3.jpg" class="d-block w-100" width="80%" height=400 alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+
+  <!--Menu container-->
+  <section id="menu-container">
+    <div class="menu-container">
+      <a href="itineraries.html" class="menu-item">
+        <div class="icon">
+          <img src="https://img.icons8.com/?size=100&id=qEpAIMP31WFn&format=png&color=000000" alt="Itinerary">
         </div>
-      </section>
-
-
-       
-      <!--servicce section-->
-      <section id="services">
-        <div class="service container">
-          <div class="servicee-top">
-            <h1 class="section-title">Serv<span>i</span>ces</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aspernatur dolorum ipsum adipisci sed sunt pariatur fuga fugiat ducimus veritatis nostrum incidunt modi dolor, nam ipsam. Impedit voluptate eaque repudiandae?</p>
-          </div>
-          <div class="service-bottom" >
-            <div class="service-item">
-              <div class="icon" ><img src="https://img.icons8.com/?size=100&id=104413&format=png&color=000000" alt=""></div>
-              <h2>Web Design</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto odit ipsam adipisci et temporibus esse blanditiis eligendi vel nisi sapiente magni, rem expedita inventore ut quasi voluptate! Ducimus, excepturi.</p>
-            </div>
-            <!--same lelvel-->
-            <div class="service-item">
-              <div class="icon" ><img src="https://img.icons8.com/?size=100&id=104413&format=png&color=000000" alt=""></div>
-              <h2>Web Design</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto odit ipsam adipisci et temporibus esse blanditiis eligendi vel nisi sapiente magni, rem expedita inventore ut quasi voluptate! Ducimus, excepturi.</p>
-            </div>
-            <!--same level-->
-            <div class="service-item">
-              <div class="icon" ><img src="https://img.icons8.com/?size=100&id=104413&format=png&color=000000" alt=""></div>
-              <h2>Web Design</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto odit ipsam adipisci et temporibus esse blanditiis eligendi vel nisi sapiente magni, rem expedita inventore ut quasi voluptate! Ducimus, excepturi.</p>
-            </div>
-          </div>
-
+        <span class="label">Itineraries</span>
+      </a>
+      <a href="transportation.html" class="menu-item">
+        <div class="icon">
+          <img src="https://img.icons8.com/?size=100&id=3mpN8PDNa82h&format=png&color=000000" alt="Transportation">
         </div>
-      </section>
-    
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <span class="label">Transportation</span>
+      </a>
+      <a href="accommodations.html" class="menu-item">
+        <div class="icon">
+          <img src="https://img.icons8.com/?size=100&id=PlByESzhzK5s&format=png&color=000000" alt="Accommodations">
+        </div>
+        <span class="label">Accommodations</span>
+      </a>
+      <a href="food.html" class="menu-item">
+        <div class="icon">
+          <img src="https://img.icons8.com/?size=100&id=c8I710pRhMz9&format=png&color=000000" alt="Food">
+        </div>
+        <span class="label">Food</span>
+      </a>
+      <a href="shopping.html" class="menu-item">
+        <div class="icon">
+          <img src="https://img.icons8.com/?size=100&id=P6ZYIof6BwLW&format=png&color=000000" alt="Shopping">
+        </div>
+        <span class="label">Shopping</span>
+      </a>
+      <a href="weather.html" class="menu-item">
+        <div class="icon">
+          <img src="https://img.icons8.com/?size=100&id=hBJTGodElN1K&format=png&color=000000" alt="Weather">
+        </div>
+        <span class="label">Weather</span>
+      </a>
+
+    </div>
+  </section>
+
+
+
+  <!--servicce section-->
+  <section id="services">
+    <div class="service container">
+      <div class="servicee-top">
+        <h1 class="section-title">Serv<span>i</span>ces</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aspernatur dolorum ipsum adipisci sed sunt
+          pariatur fuga fugiat ducimus veritatis nostrum incidunt modi dolor, nam ipsam. Impedit voluptate eaque
+          repudiandae?</p>
+      </div>
+      <div class="service-bottom">
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/?size=100&id=104413&format=png&color=000000" alt=""></div>
+          <h2>Web Design</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto odit ipsam adipisci et temporibus esse
+            blanditiis eligendi vel nisi sapiente magni, rem expedita inventore ut quasi voluptate! Ducimus, excepturi.
+          </p>
+        </div>
+        <!--same lelvel-->
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/?size=100&id=104413&format=png&color=000000" alt=""></div>
+          <h2>Web Design</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto odit ipsam adipisci et temporibus esse
+            blanditiis eligendi vel nisi sapiente magni, rem expedita inventore ut quasi voluptate! Ducimus, excepturi.
+          </p>
+        </div>
+        <!--same level-->
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/?size=100&id=104413&format=png&color=000000" alt=""></div>
+          <h2>Web Design</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto odit ipsam adipisci et temporibus esse
+            blanditiis eligendi vel nisi sapiente magni, rem expedita inventore ut quasi voluptate! Ducimus, excepturi.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

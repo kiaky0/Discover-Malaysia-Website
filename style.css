@@ -5,7 +5,7 @@
   justify-content: center;
   width: 100%;
   height: 90px;
-  background-color: #d8f1f6f5;
+  background-color: #aaf7f6f5;
 }
 
 .navbar a {
@@ -39,6 +39,49 @@
   width: 100%;  /* Ensures the image takes up the full width of its container */
   height: 400px;  /* Fixes the height to 400px */
   object-fit: cover;  /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+/*Menu container*/
+#menu-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin: 0;
+  background-color: #e1f1f7;
+}
+#menu-container .menu-container{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  align-content: center;
+}
+#menu-container .menu-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  width: 150px;
+}
+#menu-container .icon {
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#menu-container .icon img {
+  width: 70px;
+  height: 70px;
+}
+#menu-container .label {
+  text-align: center;
+  font-size: 12px;
 }
 
 /* services section*/
@@ -122,6 +165,5 @@
 #services .service-item p{
   color: white;
   text-align: left;
-
 }
 
