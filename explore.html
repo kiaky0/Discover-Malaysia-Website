@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places to Visit</title>
+    <link rel="stylesheet" type="text/css" href="explore.css" class="rel">
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <div class="navbar">
+        <a class="active" href="#">About Malaysia</a>
+        <a href="#">Experience</a>
+        <a href="#">Packages</a>
+        <a href="#">Contact Us</a>
+    </div>
+
+    <!--sliding container-->
+    <div class="container">
+        <div class="slider">
+            <div class="slides" style="--img: url('sourceImg/img1.jpg')">
+                <div class="content">
+                    <h2>Penang</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+                        quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+                        quaerat! Maiores, possimus corporis?</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('sourceImg/img2.jpg')">
+                <div class="content">
+                    <h2>KL</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+                        quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+                        quaerat! Maiores, possimus corporis?</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('sourceImg/img3.jpg')">
+                <div class="content">
+                    <h2>Terengganu</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+                        quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+                        quaerat! Maiores, possimus corporis?</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('sourceImg/img4.jpg')">
+                <div class="content">
+                    <h2>Sabah</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+                        quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+                        quaerat! Maiores, possimus corporis?</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('sourceImg/img5.jpg')">
+                <div class="content">
+                    <h2>Sarawak</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+                        quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+                        quaerat! Maiores, possimus corporis?</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('sourceImg/img6.jpg')">
+                <div class="content">
+                    <h2>Perak</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+                        quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+                        quaerat! Maiores, possimus corporis?</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+
+        next.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        })
+        prev.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length - 1]);
+        })
+
+    </script>
+</body>
+
+</html>
