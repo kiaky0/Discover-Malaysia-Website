@@ -1,48 +1,41 @@
-/* Navigation bar */
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 90px;
-    background-color: #aaf7f6f5;
-  }
-  
-  .navbar a {
-    display: flex;
-    float: left;
-    width: 150px;
-    height: 40px;
-    font-size: 17px;
-    padding: opx 3px 0px 3px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    align-items: flex-end;
-  }
-  
-  .navbar a:hover {
-    text-align: center;
-    color: rgb(7, 39, 66);
-    border-bottom: 6px solid rgb(7, 39, 66);
-    transition-duration: 0.2s;
-    /*
-    border: 5px solid #04181ab9;
-    border-radius: 1.5px;
-    */
-    font-weight: bold;
-  }
-
-/*slide show*/
-
-*
-{
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.container
-{
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
+    background-color: #aaf7f6;
+}
+
+.navbar a {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    font-size: 17px;
+    padding: 0 3px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: rgb(7, 39, 66);
+    border-bottom: 6px solid rgb(7, 39, 66);
+    transition-duration: 0.2s;
+    font-weight: bold;
+}
+
+/* Slide Show */
+.container {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -51,15 +44,15 @@
     justify-content: center;
     align-items: center;
 }
-.slider
-{
+
+.slider {
     position: absolute;
     inset: 80px 200px 80px 80px;
     background: #ccc;
     border-radius: 20px;
 }
-.slider .slides
-{
+
+.slider .slides {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -70,49 +63,52 @@
     background-position: center;
     transition: 0.5s;
     border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 }
+
 .slider .slides:nth-child(1),
-.slider .slides:nth-child(2)
-{
-    position: absolute;
+.slider .slides:nth-child(2) {
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     transform: translateY(0);
-    box-shadow: 0 25px 50px rgba(0,0,0,0);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
     background-size: cover;
 }
-.slider .slides:nth-child(3){
+
+.slider .slides:nth-child(3) {
     left: calc(50% + 240px);
     background-size: cover;
 }
-.slider .slides:nth-child(4){
+
+.slider .slides:nth-child(4) {
     left: calc(50% + 500px);
     background-size: cover;
 }
-.slider .slides:nth-child(5){
+
+.slider .slides:nth-child(5) {
     left: calc(50% + 760px);
     background-size: cover;
 }
-.slider .slides:nth-child(6){
+
+.slider .slides:nth-child(6) {
     left: calc(50% + 1020px);
     background-size: cover;
     opacity: 0;
 }
-.buttons
-{
+
+.buttons {
     position: absolute;
     bottom: 15px;
     display: flex;
     gap: 20px;
 }
-.buttons span
-{
+
+.buttons span {
     position: relative;
     width: 50px;
     height: 50px;
@@ -123,25 +119,26 @@
     align-items: center;
     border-radius: 50%;
 }
-.buttons span::before{
+
+.buttons span::before {
     content: '';
     position: absolute;
     width: 15px;
     height: 15px;
     border-top: 4px solid #fff;
     border-left: 4px solid #fff;
-    transform: rotate(315deg) translate(2px,2px);
+    transform: rotate(315deg) translate(2px, 2px);
 }
-.buttons span:nth-child(2)::before
-{
-    transform: rotate(135deg) translate(2px,2px);
+
+.buttons span:nth-child(2)::before {
+    transform: rotate(135deg) translate(2px, 2px);
 }
-.buttons span:active
-{
+
+.buttons span:active {
     opacity: 0.5;
 }
-.content
-{
+
+.content {
     position: relative;
     padding: 40px;
     max-width: 600px;
@@ -151,55 +148,161 @@
     z-index: 10000;
     opacity: 0;
 }
-.content h2
-{
+
+.content h2 {
     font-size: 4em;
     color: #fff;
 }
-.content p
-{
+
+.content p {
     color: #fff;
 }
+
 .slider .slides:nth-child(1) .content,
-.slider .slides:nth-child(2) .content
-{
+.slider .slides:nth-child(2) .content {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0);
     transition-delay: 0.5s;
 }
-@media (max-width: 900px)
-{
-    .slider{
-        position: absolute;
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+    .slider {
         inset: 40px 40px 200px 40px;
     }
-    .slider .slides{
+
+    .slider .slides {
         width: 100px;
         height: 100px;
         top: initial;
         bottom: -170px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     }
+
     .slider .slides:nth-child(1),
-    .slider .slides:nth-child(2)
-    {
-        top: initial;
-        bottom: 0px;
+    .slider .slides:nth-child(2) {
+        bottom: 0;
     }
-    .slider .slides:nth-child(3)
-    {
+
+    .slider .slides:nth-child(3) {
         left: 0;
     }
-    .slider .slides:nth-child(4)
-    {
+
+    .slider .slides:nth-child(4) {
         left: 120px;
     }
-    .slider .slides:nth-child(5)
-    {
+
+    .slider .slides:nth-child(5) {
         left: 240px;
     }
-    .slider .slides:nth-child(6)
-    {
+
+    .slider .slides:nth-child(6) {
         left: 360px;
+    }
+}
+
+/* Tour Guide */
+.container-tourGuide {
+    display: flex;
+    margin-top: 100vh; /* Adjust this value based on the height of your previous container */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-tourGuide .body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-tourGuide .container {
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Ensure that the image and text content are aligned properly */
+    justify-content: space-between; /* Ensures spacing between items */
+}
+
+.container-tourGuide .image-container {
+    flex: 1;
+}
+
+.container-tourGuide img {
+    position: absolute;
+    max-width: 30%;
+    height: auto;
+    display: block;
+}
+
+.container-tourGuide .content {
+    position: relative;
+    opacity: 1; /* Ensure content is visible */
+    transform: translateY(0);
+    padding: 20px;
+}
+
+.container-tourGuide .content h1 {
+    color: #111;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.container-tourGuide p {
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.container-tourGuide a {
+    color: #111;
+    text-decoration: none;
+}
+
+.container-tourGuide a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the download button */
+.download-button {
+    position: absolute;
+    left: 300px;
+    top: 1580px;
+    display: inline-block;
+    background-color: #007BFF; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 15px 25px; /* Padding inside the button */
+    text-align: center;
+    font-size: 1.2em; /* Slightly larger font */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Spacing above the button */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    animation: pulse 1.5s infinite; /* Add pulsing animation */
+}
+
+.download-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Keyframes for pulsing animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
     }
 }
