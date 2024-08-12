@@ -8,7 +8,7 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <title>Doscover Malaysia</title>
+  <title>Discover Malaysia</title>
 
 </head>
 
@@ -111,6 +111,95 @@
         </div>
     </div>
   </section>
+
+
+  <!--Explore section-->
+  <div class="sights-container">
+    <h2 class="Explore-header">The Stunning Sights and Scenes</h2>
+    
+    <button class="explore-button" id="exploreButton">Explore</button>
+    
+    <div class="image-grid">
+      <div class="image-item">
+        <img src="sourceImg/Garden-Cameron-Highlands.jpg" alt="Garden in Cameron">
+        <div class="image-caption">Cameron Highland Garden</div>
+        <div class="image-meta">Lavenda</div>
+      </div>
+      <div class="image-item">
+        <img src="sourceImg/mount-kinabalu.jpg" alt="Mount Mount-Kinabalu">
+        <div class="image-caption">Mount Kinabalu</div>
+        <div class="image-meta">High Mountain</div>
+      </div>
+      <div class="image-item">
+        <img src="sourceImg/Taman_Negara_forest.jpg" alt="Taman Negara Forest">
+        <div class="image-caption">Taman Negara</div>
+        <div class="image-meta">Forest</div>
+      </div>
+      <div class="image-item">
+        <img src="sourceImg/pangkor-island.jpg" alt="Pangkor island">
+        <div class="image-caption">Pangkor</div>
+        <div class="image-meta">Island</div>
+      </div>
+      <div class="image-item">
+        <img src="sourceImg/zoo-negara.jpg" alt="Zoo Negara">
+        <div class="image-caption">Zoo Negara</div>
+        <div class="image-meta">Animal</div>
+      </div>
+      <div class="image-item">
+        <img src="sourceImg/theme-park.jpeg" alt="Malaysia Theme Park">
+        <div class="image-caption">Sunway Lagoon</div>
+        <div class="image-meta">Theme Park</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Wait for the DOM to fully load before running the script
+    document.addEventListener('DOMContentLoaded', function() {
+      // Select the button by its ID
+      const exploreButton = document.getElementById('exploreButton');
+      
+      // Add a click event listener to the button
+      exploreButton.addEventListener('click', function() {
+        // Redirect to the explore.html page
+        window.location.href = 'explore.html';
+      });
+    });
+  </script>
+  
+
+
+  <br>
+  <!--enquiry section-->
+  <div class="services-section">
+    <button class="enquiry-button">MAKE AN ENQUIRY</button>
+    
+    <div class="services-container">
+      <div class="service-item">
+        <img src="sourceImg/book-icon.png" alt="Extensive Knowledge">
+        <h3>Extensive Knowledge</h3>
+        <p>Our team of dedicated professionals has fantastic experience in the Australian tourism industry. We are passionate about promoting the beauty of this country to travellers from all over the world.</p>
+      </div>
+      
+      <div class="service-item">
+        <img src="sourceImg/hands-heart-icon.png" alt="Quality Options">
+        <h3>Quality Options</h3>
+        <p>We have established a network of reliable partners, carefully selecting the best attractions, activities & accommodations to guarantee you receive the highest quality and genuine experiences.</p>
+      </div>
+      
+      <div class="service-item">
+        <img src="sourceImg/aussie-specialist-icon.png" alt="Customised Tours">
+        <h3>Customised Tours</h3>
+        <p>We know this country from top to bottom & coast to coast and will build a tailor-made itinerary to suit you. We offer prompt, detailed and honest advice to make your decisions easier, so you can relax!</p>
+      </div>
+      
+      <div class="service-item">
+        <img src="sourceImg/headset-icon.png" alt="Personalised Service">
+        <h3>Personalised Service</h3>
+        <p>A passionate and dedicated consultant supported by a fantastic team ensures you get the service you deserve. Plus in-country support and the latest technology ensure everything goes to plan.</p>
+      </div>
+    </div>
+  </div>
   
   <!--servicce section-->
   <section id="services">
