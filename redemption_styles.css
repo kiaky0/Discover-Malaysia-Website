@@ -1,0 +1,101 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* Layout for each location row */
+.location-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Card containing the image and location name */
+.location-card {
+    flex: 1;
+    text-align: center;
+}
+
+/* Image size control */
+.location-image {
+    width: 125px;  /* Set the width of the image */
+    height: 125px; /* Set the height of the image */
+    border-radius: 8px; /* Optional: round the corners */
+    object-fit: cover;  /* Ensure the image covers the entire area without distortion */
+}
+
+/* Location name below the image */
+.location-name {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Description section */
+.description {
+    flex: 2;
+    padding-left: 20px;
+}
+
+/* Redeem button section */
+.redeem {
+    flex: 1;
+    text-align: right;
+}
+
+.redeem-button {
+    background-color: #4CAF50;
+    width:100px;
+    height: 100px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.redeem-button:hover {
+    background-color: #45a049;
+}
+
+/* How to redeem button styling */
+.how-to-redeem {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.how-to-redeem-button {
+    background-color: #1e90ff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.how-to-redeem-button:hover {
+    background-color: #1c86ee;
+}
