@@ -1,0 +1,48 @@
+/* Tour guide list container */
+#tour-guides {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling */
+    max-height: 80vh; /* Adjust the height of the container */
+  }
+  
+  /* Individual tour guide item */
+  .tour-guide {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tour guide image */
+  .tour-guide img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  /* Tour guide info container */
+  .tour-guide div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Tour guide name */
+  .tour-guide h2 {
+    margin: 0 0 10px 0; /* Add bottom margin to separate from other info */
+    font-size: 24px;
+  }
+  
+  /* Tour guide additional info */
+  .tour-guide p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
