@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Guide List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleTour.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a class="active" href="#">About Malaysia</a>
+        <a href="explore.html">Explore</a>
+        <a href="#">Packages</a>
+        <a href="contactUs.html">Contact Us</a>
+    </div>
+
+    <header>
+        <h1>Book your own private tour guide right now in Malaysia!!</h1>
+        <p class="tagline">Our website guarantees 100% safety with our tour guides. Book a tour guide for a more
+            memorable and enjoyable trip in Malaysia.</p>
+        <div id="filter-container">
+            <button id="filter-button">Filter Options</button>
+            <div id="filters" style="display: none;">
+                <label for="location">Location:</label>
+                <select id="location">
+                    <option value="all">All</option>
+                    <option value="Johor">Johor</option>
+                    <option value="Kedah">Kedah</option>
+                    <option value="Kelantan">Kelantan</option>
+                    <option value="KualaLumpur">Kuala Lumpur</option>
+                    <option value="Malacca">Malacca</option>
+                    <option value="NegeriSembilan">Negeri Sembilan</option>
+                    <option value="Pahang">Pahang</option>
+                    <option value="Penang">Penang</option>
+                    <option value="Perlis">Perlis</option>
+                    <option value="Sabah">Sabah</option>
+                    <option value="Sarawak">Sarawak</option>
+                    <option value="Selongor">Selongor</option>
+                    <option value="Terengganu">Terengganu</option>
+                </select>
+
+                <label for="language">Language:</label>
+                <select id="language">
+                    <option value="english">English</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="malay">Malay</option>
+                </select>
+
+                <label for="experience">Experience:</label>
+                <select id="experience">
+                    <option value="all">All</option>
+                    <option value="1-3">1-3 Years</option>
+                    <option value="4-6">4-6 Years</option>
+                    <option value="7-10">7-10 Years</option>
+                </select>
+
+                <button id="apply-filter">Apply Filter</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="tour-guides">
+        <div class="tour-guide" data-location="Penang,Perlis" data-language="chinese,english,malay"
+            data-experience="1-3">
+            <img src="Touguide/guide1.jpg" alt="Guide 1">
+            <div> <!-- Wrapping all text info in a div -->
+                <h2>Tan Qi Yang</h2>
+                <p><b>Location:</b> Penang, Perlis</p>
+                <p><b>Language:</b> All Language</p>
+                <p><b>Experience:</b> 1-3 Years</p>
+                <p><b>Introduction:</b> Hey, come explore Malaysia with me! I'm very friendly and will take you to all the best food spots in Penang and Kuala Lumpur.</p>
+            </div>
+        </div>
+        <div class="tour-guide" data-location="Penang,KualaLumpur" data-language="chinese,english"
+            data-experience="4-6">
+            <img src="Touguide/guide1.jpg" alt="Guide 1">
+            <div> <!-- Wrapping all text info in a div -->
+                <h2>Tan Kia Yee</h2>
+                <p><b>Location:</b> Penang, Kuala Lumpur</p>
+                <p><b>Language:</b> Chinese, English</p>
+                <p><b>Experience:</b> 4-6 Years</p>
+                <p><b>Introduction:</b> He is a good person</p>
+            </div>
+        </div>
+        <div class="tour-guide" data-location="Penang" data-language="malay" data-experience="7-10">
+            <img src="Touguide/guide1.jpg" alt="Guide 1">
+            <div> <!-- Wrapping all text info in a div -->
+                <h2>Lim Phai Yuan</h2>
+                <p><b>Location:</b> Penang</p>
+                <p><b>Language:</b> Malay</p>
+                <p><b>Experience:</b> 7-10 Years</p>
+                <p><b>Introduction:</b> He is a good person</p>
+            </div>
+        </div>
+        <div class="tour-guide" data-location="Johor" data-language="english" data-experience="7-10">
+            <img src="Touguide/guide1.jpg" alt="Guide 1">
+            <div> <!-- Wrapping all text info in a div -->
+                <h2>Ooi Khai Shen</h2>
+                <p><b>Location:</b> Johor</p>
+                <p><b>Language:</b> English</p>
+                <p><b>Experience:</b> 7-10 Years</p>
+                <p><b>Introduction:</b> He is a good person</p>
+            </div>
+        </div>
+        <div class="tour-guide" data-location="Sabah,Sarawak" data-language="malay,english" data-experience="7-10">
+            <img src="Touguide/guide1.jpg" alt="Guide 1">
+            <div> <!-- Wrapping all text info in a div -->
+                <h2>Ali</h2>
+                <p><b>Location:</b> Sabah, Sarawak</p>
+                <p><b>Language:</b> English, Malay</p>
+                <p><b>Experience:</b> 7-10 Years</p>
+                <p><b>Introduction:</b> He is a good person</p>
+            </div>
+        </div>
+        <!-- Add more tour guides as needed -->
+        <!-- No results message -->
+        <div id="no-results">
+            <img src="Touguide/sorry.png" alt="Sorry" class="sorry-image">
+            <p>Sorry, there are currently no tour guides available with these filters.</p>
+        </div>
+
+    </div>
+    <script src="scriptTour.js"></script>
+</body>
+
+</html>
