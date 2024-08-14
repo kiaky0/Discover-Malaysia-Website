@@ -1,3 +1,5 @@
+
+// auto slide show container
 let slideIndex = 1;
 let slideInterval;
 
@@ -40,4 +42,7 @@ function resetAutoSlide() {
     clearInterval(slideInterval);
     startAutoSlide();
 }
+
+// end of auto slide show container
+
 

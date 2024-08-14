@@ -8,50 +8,82 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!--google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+    rel="stylesheet">
   <title>Discover Malaysia</title>
 
 </head>
 
 <body>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <!-- navigation bar -->
   <div class="navbar">
-    <a href="index.html">Home</a>
-    <a class="active" href="#">About Malaysia</a>
-    <a href="explore.html">Explore</a>
-    <a href="#">Packages</a>
-    <a href="contactUs.html">Contact Us</a>
+    <div class="logo">
+      <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
+      <span>Traveling Malaysia</span>
+    </div>
+    <a class="active" href="">Home</a>
+    <a href="">Explore</a>
+    <a href="">Blog</a>
+    <a href="">About Us</a>
+    <a href="">Contact Us</a>
   </div>
 
   <!--sliding section-->
-  <section id="first">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="sourceImg/image1.jpg" class="d-block w-100" width="80%" height=400 alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="sourceImg/image2.jpg" class="d-block w-100" width="80%" height=400 alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="sourceImg/image3.jpg" class="d-block w-100" width="80%" height=400 alt="...">
-        </div>
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="sourceImg/image2.jpg" class="d-block w-100" width="80%" height=400 alt="...">
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="carousel-item">
+        <img src="sourceImg/image3.jpg" class="d-block w-100" width="80%" height=400 alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="sourceImg/image1.jpg" class="d-block w-100" width="80%" height=400 alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!--message go out-->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title pop-out">FEATURES</h2>
+      <h1 class="feature-title pop-out">Seamless calendar scheduling</h1>
+      <p class="feature-description pop-out">
+        Event's scheduling features are built to meet the unique needs
+        of SMBs, ensuring seamless coordination for all your meetings.
+      </p>
     </div>
   </section>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.pop-out').forEach(element => {
+      observer.observe(element);
+    });
+  </script>
 
 
   <!--Menu container-->
@@ -65,7 +97,7 @@
       </a>
       <a href="tourgide.html" class="menu-item">
         <div class="icon">
-          <img src="/Touguide/tourguide_icon.png"" alt="Tour Guide">
+          <img src="/Touguide/tourguide_icon.png"" alt=" Tour Guide">
         </div>
         <span class="label">Tour Guide</span>
       </a>
@@ -97,28 +129,45 @@
     </div>
   </section>
 
-  <!-- get started button -->
-  <section id="container-start">
-    <div class="container">
-        <div class="overlay">
-            <div class="content">
-                <div class="step">03 / PLAN WITH A LOCAL</div>
-                <h1>Experience the real Malaysia</h1>
-                <p>Let a local expert craft your dream trip.</p>
-                <a href="#" class="button" aria-label="Get started with planning your trip">Get started →</a>
-            </div>
-            <div class="logo">elsewhere by lonely planet</div>
-        </div>
+  <!--Parallel effect container-->
+  <div class="parallax-container">
+    <div class="parallax-content">
+      <h2>Scheduling</h2>
+      <h1>Start Your Journey</h1>
+      <p>
+        Explore the beauty of the nature<br>
+        Meet the unique culture<br>
+        Get your guide, and your flight
+      </p>
+      <div class="app-links">
+        <a href="" class="Event list">START NOW</a>
+      </div>
     </div>
-  </section>
+  </div>
 
+  <script>
+    document.addEventListener('scroll', function () {
+      const elements = document.querySelectorAll('.parallax-content h2, .parallax-content h1, .parallax-content p');
+      const triggerPoint = window.innerHeight * 0.8; // Adjust trigger point as needed
+
+      elements.forEach((element, index) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < triggerPoint) {
+          element.style.animation = `fadeInSlideUp 1s ease-out forwards`;
+          element.style.animationDelay = `${0.3 * index}s`; // Sequential animation delay
+        }
+      });
+    });
+
+  </script>
 
   <!--Explore section-->
   <div class="sights-container">
     <h2 class="Explore-header">The Stunning Sights and Scenes</h2>
-    
+
     <button class="explore-button" id="exploreButton">Explore</button>
-    
+
     <div class="image-grid">
       <div class="image-item">
         <img src="sourceImg/Garden-Cameron-Highlands.jpg" alt="Garden in Cameron">
@@ -155,89 +204,134 @@
 
   <script>
     // Wait for the DOM to fully load before running the script
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Select the button by its ID
       const exploreButton = document.getElementById('exploreButton');
-      
+
       // Add a click event listener to the button
-      exploreButton.addEventListener('click', function() {
+      exploreButton.addEventListener('click', function () {
         // Redirect to the explore.html page
         window.location.href = 'explore.html';
       });
     });
   </script>
-  
-
 
   <br>
   <!--enquiry section-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+    rel="stylesheet">
+
   <div class="services-section">
+    <h1>Approach to Our Team</h1>
     <button class="enquiry-button">MAKE AN ENQUIRY</button>
-    
+
     <div class="services-container">
       <div class="service-item">
         <img src="sourceImg/book-icon.png" alt="Extensive Knowledge">
         <h3>Extensive Knowledge</h3>
-        <p>Our team of dedicated professionals has fantastic experience in the Australian tourism industry. We are passionate about promoting the beauty of this country to travellers from all over the world.</p>
+        <p>Our team of dedicated professionals has fantastic experience in the Australian tourism industry. We are
+          passionate about promoting the beauty of this country to travellers from all over the world.</p>
       </div>
-      
+
       <div class="service-item">
         <img src="sourceImg/hands-heart-icon.png" alt="Quality Options">
         <h3>Quality Options</h3>
-        <p>We have established a network of reliable partners, carefully selecting the best attractions, activities & accommodations to guarantee you receive the highest quality and genuine experiences.</p>
+        <p>We have established a network of reliable partners, carefully selecting the best attractions, activities &
+          accommodations to guarantee you receive the highest quality and genuine experiences.</p>
       </div>
-      
+
       <div class="service-item">
         <img src="sourceImg/aussie-specialist-icon.png" alt="Customised Tours">
         <h3>Customised Tours</h3>
-        <p>We know this country from top to bottom & coast to coast and will build a tailor-made itinerary to suit you. We offer prompt, detailed and honest advice to make your decisions easier, so you can relax!</p>
+        <p>We know this country from top to bottom & coast to coast and will build a tailor-made itinerary to suit you.
+          We offer prompt, detailed and honest advice to make your decisions easier, so you can relax!</p>
       </div>
-      
+
       <div class="service-item">
         <img src="sourceImg/headset-icon.png" alt="Personalised Service">
         <h3>Personalised Service</h3>
-        <p>A passionate and dedicated consultant supported by a fantastic team ensures you get the service you deserve. Plus in-country support and the latest technology ensure everything goes to plan.</p>
+        <p>A passionate and dedicated consultant supported by a fantastic team ensures you get the service you deserve.
+          Plus in-country support and the latest technology ensure everything goes to plan.</p>
       </div>
     </div>
   </div>
-  
-  <!--servicce section-->
-  <section id="services">
-    <div class="service container">
-      <div class="servicee-top">
-        <h1 class="section-title">Serv<span>i</span>ces</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aspernatur dolorum ipsum adipisci sed sunt
-          pariatur fuga fugiat ducimus veritatis nostrum incidunt modi dolor, nam ipsam. Impedit voluptate eaque
-          repudiandae?</p>
-      </div>
-      <div class="service-bottom">
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/?size=100&id=104413&format=png&color=000000" alt=""></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto odit ipsam adipisci et temporibus esse
-            blanditiis eligendi vel nisi sapiente magni, rem expedita inventore ut quasi voluptate! Ducimus, excepturi.
-          </p>
-        </div>
-        <!--same lelvel-->
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/?size=100&id=104413&format=png&color=000000" alt=""></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto odit ipsam adipisci et temporibus esse
-            blanditiis eligendi vel nisi sapiente magni, rem expedita inventore ut quasi voluptate! Ducimus, excepturi.
-          </p>
-        </div>
-        <!--same level-->
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/?size=100&id=104413&format=png&color=000000" alt=""></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto odit ipsam adipisci et temporibus esse
-            blanditiis eligendi vel nisi sapiente magni, rem expedita inventore ut quasi voluptate! Ducimus, excepturi.
-          </p>
-        </div>
-      </div>
 
-    </div>
-  </section>
+  <!-- JavaScript -->
+  <script>
+    document.querySelector('.enquiry-button').addEventListener('click', function() {
+      window.location.href = 'contactUs.html';
+    });
+
+    document.addEventListener('scroll', function () {
+      const section = document.querySelector('.services-section');
+      const serviceItems = document.querySelectorAll('.services-section .service-item');
+      const sectionTop = section.getBoundingClientRect().top;
+      const triggerPoint = window.innerHeight * 0.8;
+
+      if (sectionTop < triggerPoint) {
+        section.classList.add('in-view');
+
+        serviceItems.forEach((item, index) => {
+          item.style.transitionDelay = `${index * 0.2}s`; // Staggered animation
+        });
+      }
+    });
+  </script>
+
+      <!--Footer-->
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">T&C</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+              <li><a href="#">Schedule</a></li>
+              <li><a href="#">Share</a></li>
+              <li><a href="#">Sign</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Youtube</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Use Cases</h3>
+            <ul>
+              <li><a href="#">Educational Institutions</a></li>
+              <li><a href="#">Professional Services</a></li>
+              <li><a href="#">Freelancers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="logo">
+            <img src="sourceImg/TravelLogo.png" alt="Event Company Logo">
+            <span>Traveling Malaysia</span>
+          </div>
+          <div class="copyright">
+            Traveling Malaysia is created by the team at <a href="#">ABCD</a> | © 2024 ABCD ALL RIGHTS RESERVED
+          </div>
+          <div class="cookies-preferences">
+            <button>🍪 Cookies Preferences</button>
+          </div>
+        </div>
+      </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
