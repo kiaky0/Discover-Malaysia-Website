@@ -176,6 +176,7 @@ header {
     cursor: not-allowed;
 }
 
+<<<<<<< HEAD
 /* Explore book review */
 .user-reviews {
     font-family: Arial, sans-serif;
@@ -233,6 +234,8 @@ header {
     margin-top: 20px;
   }
 
+=======
+>>>>>>> 6a00e7326ec7396924b20b9aaf987fc0f8a57bad
 
 /* Footer */
 
