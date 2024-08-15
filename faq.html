@@ -6,72 +6,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Malaysia: FAQs</title>
     <link rel="stylesheet" href="faq.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
 <body>
-
-    <header>
+    <header role="banner"> 
         <div class="navbar">
-            <a class="active" href="#">About Malaysia</a>
-            <a href="#">Experience</a>
-            <a href="#">Packages</a>
-            <a href="#">Contact Us</a>
+            <div class="logo">
+                <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
+                <span>Traveling Malaysia</span>
+            </div>
+            <nav> 
+                <a class="" href="index.html">Home</a>
+                <a class="active" href="explore.html">Explore</a>
+                <a href="">Blog</a>
+                <a href="">About Us</a>
+                <a href="contactUs.html">Contact Us</a>
+            </nav>
         </div>
+
+        <section class="faq-hero"> 
+            <div class="container">
+                <div class="faq-hero-banner"> 
+                    <div class="banner-content">
+                        <h1>How can we help?</h1>
+                        <div class="search-bar">
+                            <input type="text" id="search-input" placeholder="Type your question">
+                            <button id="search-button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
     </header>
 
-    <main class="container">
+    <main>
         <section id="faq">
-            <h1 class="section-title">Frequently Asked Questions</h1>
+            <div class="container">
+                <h2>Featured Articles</h2>
+                <div class="faq-grid">
+                    <div class="faq-category">
+                        <h3>Planning</h3>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="answer1">
+                                <i class="fas fa-calendar-alt"></i> What is the best time of year to visit Malaysia?
+                            </button>
+                            <div class="faq-answer" id="answer1" aria-hidden="true">
+                                <p>Malaysia enjoys a <strong>tropical climate year-round</strong> , but the best time to visit generally depends on the region and activities you're interested in. </p>
+                                <ul>
+                                    <li>The dry season (May to September) is ideal for <span style="color: #065fb8;">beach vacations and outdoor adventures</span></li>
+                                    <li>The shoulder seasons (April-May and September-October) offer <span style="color: #065fb8;">pleasant weather and fewer crowds</span>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="answer2">
+                                <i class="fas fa-passport"></i> Do I need a visa to visit Malaysia?
+                            </button>
+                            <div class="faq-answer" id="answer2" aria-hidden="true">
+                                <p>Citizens of many countries can enter Malaysia without a visa for a specific period, usually 30 or 90 days. However, it's crucial to check the latest <strong>visa requirements</strong> for your nationality on the <a href="https://www.imi.gov.my/index.php/en/home/" target="_blank" style="color: #065fb8;font-weight: bold;">official Malaysian immigration website</a>. If you need a visa, you can apply at the nearest Malaysian embassy or consulate.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Search FAQs...">
-                <button id="search-button"><i class="fas fa-search"></i></button> </div>
+                    <div class="faq-category">
+                        <h3>Adventure Activities</h3>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="answer3">
+                                <i class="fas fa-hiking"></i> What are some popular adventure activities in Malaysia?
+                            </button>
+                            <div class="faq-answer" id="answer3" aria-hidden="true">
+                                <p>Malaysia offers a wide range of <strong>adventure activities</strong>, including:</p>
+                                <ul>
+                                    <li><span style="color: #065fb8;">Jungle trekking</span> in Taman Negara or other national parks</li>
+                                    <li><span style="color: #065fb8;">Scuba diving</span> and <span style="color: #065fb8;">snorkeling</span> in Sipadan or Redang Island</li>
+                                    <li><span style="color: #065fb8;">White-water rafting</span> in Selangor or Perak</li>
+                                    <li><span style="color: #065fb8;">Rock climbing</span> in Batu Caves or Mount Kinabalu</li>
+                                    <li><span style="color: #065fb8;">Caving</span> in Mulu Caves or Gua Tempurung</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="answer4">
+                                <i class="fas fa-toolbox"></i> What kind of gear or equipment do I need?
+                            </button>
+                            <div class="faq-answer" id="answer4" aria-hidden="true">
+                                <p>The gear you need will depend on the specific activities you plan to do. However, some <strong>essentials for adventure travel</strong> in Malaysia include:</p>
+                                <ul>
+                                    <li>Comfortable hiking boots or shoes</li>
+                                    <li>Quick-drying clothing</li>
+                                    <li>Rain gear</li>
+                                    <li>Insect repellent</li>
+                                    <li>Sunscreen</li>
+                                    <li>Hat</li>
+                                    <li>Sunglasses</li>
+                                    <li>Water bottle</li>
+                                    <li>First-aid kit</li>
+                                </ul>
+                                <p>For specific activities like diving or climbing, you might need specialized equipment. Check with your tour operator or activity provider for details.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="faq-list">
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What is the best time of year to visit Malaysia?
-                    </button>
-                    <div class="faq-answer">
-                        <p>Malaysia enjoys a tropical climate year-round, but the best time to visit generally depends on the region and activities you're interested in. The dry season (May to September) is ideal for beach vacations and outdoor adventures, while the shoulder seasons (April-May and September-October) offer pleasant weather and fewer crowds. </p>
+                    <div class="faq-category">
+                        <h3>Culture & Etiquette</h3>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="answer5">
+                                <i class="fas fa-mosque"></i> What are some cultural customs I should be aware of?
+                            </button>
+                            <div class="faq-answer" id="answer5" aria-hidden="true">
+                                <p>Malaysia is a <strong>multicultural country</strong> with <span style="color: #065fb8;">diverse customs and traditions</span>. Some general tips include:</p>
+                                <ul>
+                                    <li>Dress modestly, especially when visiting religious sites.</li>
+                                    <li>Remove your shoes before entering someone's home or a mosque.</li>
+                                    <li>Use your right hand for eating and giving or receiving items.</li>
+                                    <li>Avoid public displays of affection.</li>
+                                    <li>Be respectful of local customs and traditions.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="answer6">
+                                <i class="fas fa-tshirt"></i> Are there any restrictions on clothing or behavior?
+                            </button>
+                            <div class="faq-answer" id="answer6" aria-hidden="true">
+                                <p>While Malaysia is <strong>generally tolerant</strong>, it's important to be <span style="color: #065fb8;">mindful of cultural sensitivities</span>. Avoid wearing revealing clothing, especially in rural areas or religious sites. Public displays of affection are frowned upon. It's also considered rude to point with your index finger; use your thumb instead.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Do I need a visa to visit Malaysia?
-                    </button>
-                    <div class="faq-answer">
-                        <p>Citizens of many countries can enter Malaysia without a visa for a specific period, usually 30 or 90 days. However, it's crucial to check the latest visa requirements for your nationality on the official Malaysian immigration website. If you need a visa, you can apply at the nearest Malaysian embassy or consulate.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What are some cultural customs and etiquette tips I should be aware of?
-                    </button>
-                    <div class="faq-answer">
-                        <p>Malaysia is a multicultural country with diverse customs and traditions. Some general tips include:
-                            <ul>
-                                <li>Dress modestly, especially when visiting religious sites.</li>
-                                <li>Remove your shoes before entering someone's home or a mosque.</li>
-                                <li>Use your right hand for eating and giving or receiving items.</li>
-                                <li>Avoid public displays of affection.</li>
-                                <li>Be respectful of local customs and traditions.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-
+                <div id="no-results-message" style="display: none;">No results found.</div> 
             </div>
         </section>
     </main>
 
-    <footer>
-        </footer>
+    <!--Footer-->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">T&C</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">Share</a></li>
+                    <li><a href="#">Sign</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Use Cases</h3>
+                <ul>
+                    <li><a href="#">Educational Institutions</a></li>
+                    <li><a href="#">Professional Services</a></li>
+                    <li><a href="#">Freelancers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="logo">
+                <img src="sourceImg/TravelLogo.png" alt="Event Company Logo">
+                <span>Traveling Malaysia</span>
+            </div>
+            <div class="copyright">
+                Traveling Malaysia is created by the team at <a href="#">ABCD</a> | © 2024 ABCD ALL RIGHTS RESERVED
+            </div>
+            <div class="cookies-preferences">
+                <button>🍪 Cookies Preferences</button>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="faq.js"></script> 
 </body>
 
 </html>
+
