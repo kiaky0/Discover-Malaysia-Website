@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore</title>
     <link rel="stylesheet" href="exploreM.css">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <body>
@@ -13,164 +19,95 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!-- navigation bar -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
-            <span>Traveling Malaysia</span>
-        </div>
-        <a class="" href="index.html">Home</a>
-<<<<<<< HEAD
-        <a class="active" href="explore.html">Explore</a>
-=======
-        <a class="active" href="exploreM.html">Explore</a>
->>>>>>> 6a00e7326ec7396924b20b9aaf987fc0f8a57bad
-        <a href="">Blog</a>
-        <a href="">About Us</a>
-        <a href="contactUs.html">Contact Us</a>
-    </div>
-
-    <header>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Where would you like to go?">
-            <button onclick="searchTours()">SEARCH AGAIN</button>
-        </div>
-    </header>
-
-    <main>
-        <div class="filters">
-            <label for="dateFilter">Filter by date:</label>
-            <input type="date" id="dateFilter">
-
-            <label for="priceFilter">Max price:</label>
-            <input type="number" id="priceFilter" min="0">
-
-            <button onclick="applyFilters()">Apply Filters</button>
-        </div>
-
-        <div id="tourList"></div>
-    </main>
-
-<<<<<<< HEAD
-    <!--Explore book-->
-    <div class="user-reviews">
-        <h1>User Reviews</h1>
-        <p>Don't take our word for it. See what our users say</p>
-
-        <div class="reviewers">
-            <div class="reviewer" data-reviewer="richardo">
-                <img src="path_to_richardo_icon.png" alt="Richardo icon">
-                <h3>Richardo</h3>
-                <p>Founder, Venuerific</p>
-            </div>
-            <div class="reviewer" data-reviewer="mahesh">
-                <img src="path_to_mahesh_icon.png" alt="Mahesh icon">
-                <h3>Mahesh</h3>
-                <p>CFO, Communa</p>
-            </div>
-            <div class="reviewer" data-reviewer="hayden">
-                <img src="path_to_hayden_icon.png" alt="Hayden icon">
-                <h3>Hayden</h3>
-                <p>Director, Momentum Tutoring</p>
-            </div>
-        </div>
-
-        <div id="reviewPanel" class="review-panel">
-            <span class="close-panel">&times;</span>
-            <h2 id="reviewerName"></h2>
-            <p id="reviewContent"></p>
-            <button id="downloadPdf">Download PDF</button>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const reviewers = document.querySelectorAll('.reviewer');
-            const panel = document.getElementById('reviewPanel');
-            const closeBtn = document.querySelector('.close-panel');
-            const reviewerName = document.getElementById('reviewerName');
-            const reviewContent = document.getElementById('reviewContent');
-            const downloadBtn = document.getElementById('downloadPdf');
-
-            const reviews = {
-                richardo: "WorkRamen has a simple UI which makes it easy for my team to use and adapt. Can't wait for the other features coming out.",
-                mahesh: "Great collaboration tool! It has streamlined our workflow significantly.",
-                hayden: "The user-friendly design has made team coordination a breeze. Highly recommended!"
-            };
-
-            reviewers.forEach(reviewer => {
-                reviewer.addEventListener('click', function () {
-                    const reviewerId = this.getAttribute('data-reviewer');
-                    reviewerName.textContent = this.querySelector('h3').textContent;
-                    reviewContent.textContent = reviews[reviewerId];
-                    panel.classList.add('active');
-                });
-            });
-
-            closeBtn.onclick = function () {
-                panel.classList.remove('active');
-            }
-
-            downloadBtn.onclick = function () {
-                alert('PDF successfully downloaded');
-            }
-        });
-    </script>
-
-=======
->>>>>>> 6a00e7326ec7396924b20b9aaf987fc0f8a57bad
-    <!--Footer-->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">T&C</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Products</h3>
-                <ul>
-                    <li><a href="#">Schedule</a></li>
-                    <li><a href="#">Share</a></li>
-                    <li><a href="#">Sign</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Use Cases</h3>
-                <ul>
-                    <li><a href="#">Educational Institutions</a></li>
-                    <li><a href="#">Professional Services</a></li>
-                    <li><a href="#">Freelancers</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
+    <header role="banner">
+        <div class="navbar">
             <div class="logo">
-                <img src="sourceImg/TravelLogo.png" alt="Event Company Logo">
+                <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
                 <span>Traveling Malaysia</span>
             </div>
-            <div class="copyright">
-                Traveling Malaysia is created by the team at <a href="#">ABCD</a> | © 2024 ABCD ALL RIGHTS RESERVED
-            </div>
-            <div class="cookies-preferences">
-                <button>🍪 Cookies Preferences</button>
-            </div>
+            <nav>
+                <a class="active" href="index.html">Home</a>
+                <a class="" href="exploreM.html">Explore</a>
+                <a href="">Blog</a>
+                <a href="">About Us</a>
+                <a href="contactUs.html">Contact Us</a>
+            </nav>
         </div>
-    </footer>
 
-    <script src="exploreMScript.js"></script>
+        <header class="searching-container">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Where would you like to go?">
+                <button onclick="searchTours()">SEARCH AGAIN</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="filters">
+                <label for="dateFilter">Filter by date:</label>
+                <input type="date" id="dateFilter">
+
+                <label for="priceFilter">Max price:</label>
+                <input type="number" id="priceFilter" min="0">
+
+                <button onclick="applyFilters()">Apply Filters</button>
+            </div>
+
+            <div id="tourList"></div>
+        </main>
+
+        <!--Footer-->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">T&C</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Schedule</a></li>
+                        <li><a href="#">Share</a></li>
+                        <li><a href="#">Sign</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Youtube</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Use Cases</h3>
+                    <ul>
+                        <li><a href="#">Educational Institutions</a></li>
+                        <li><a href="#">Professional Services</a></li>
+                        <li><a href="#">Freelancers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="logo">
+                    <img src="sourceImg/TravelLogo.png" alt="Event Company Logo">
+                    <span>Traveling Malaysia</span>
+                </div>
+                <div class="copyright">
+                    Traveling Malaysia is created by the team at <a href="#">ABCD</a> | © 2024 ABCD ALL RIGHTS RESERVED
+                </div>
+                <div class="cookies-preferences">
+                    <button>🍪 Cookies Preferences</button>
+                </div>
+            </div>
+        </footer>
+
+        <script src="exploreMScript.js"></script>
 </body>
 
 </html>

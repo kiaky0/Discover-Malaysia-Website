@@ -1,25 +1,41 @@
-/* navigation bar */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
+}
 
 body {
   margin: 0;
   padding: 0;
+  color: var(--text-color); /* Use the text color variable */
+  background-color: var(--light-bg); /* Use the light background variable */
 }
 
+:root {
+  --primary-color: #007bff; 
+  --secondary-color: #333;
+  --text-color: #333;
+  --light-bg: #f0f0f0;
+  --accent-color: #f25a70; /* Add an accent color */
+}
+
+/* Navigation Bar */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Distribute space between logo and nav */
+  align-items: center; 
   width: 100%;
   height: 78px;
-  background-color: #333;
+  background-color: var(--secondary-color); 
   overflow: hidden;
-  font-family: Arial, sans-serif;
+  padding: 0 20px; /* Add some padding for better spacing */
 }
 
 .navbar .logo {
   display: flex;
   align-items: center;
-  padding-left: 15px;
-  padding-right: 10px;
 }
 
 .navbar .logo img {
@@ -29,20 +45,21 @@ body {
 
 .navbar .logo span {
   font-family: 'Edu VIC WA NT Beginner', sans-serif;
-  font-size: 30px;
+  font-size: 1.8rem; /* Use rem for better scalability */
   font-weight: bold;
-  padding-right: 100px;
-  font-weight: 800;
   color: #f2f2f2;
 }
 
+.navbar nav {
+  display: flex; /* Use flexbox for better nav layout */
+}
+
 .navbar a {
-  float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1rem; /* Use rem for better scalability */
   transition: all 0.3s ease;
 }
 
@@ -53,7 +70,7 @@ body {
 }
 
 .navbar a.active {
-  background-color: #4CAF50;
+  background-color: var(--accent-color); 
   color: white;
 }
 
@@ -93,7 +110,6 @@ body {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* End of nav bar */
 
 
 /* moving slide container */

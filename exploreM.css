@@ -1,129 +1,145 @@
-/* navigation bar */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
+}
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color); /* Use the text color variable */
+  background-color: var(--light-bg); /* Use the light background variable */
+}
+
+:root {
+  --primary-color: #007bff; 
+  --secondary-color: #333;
+  --text-color: #333;
+  --light-bg: #f0f0f0;
+  --accent-color: #f25a70; /* Add an accent color */
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribute space between logo and nav */
+  align-items: center; 
+  width: 100%;
+  height: 78px;
+  background-color: var(--secondary-color); 
+  overflow: hidden;
+  padding: 0 20px; /* Add some padding for better spacing */
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 70px;
+  margin-right: 10px;
+}
+
+.navbar .logo span {
+  font-family: 'Edu VIC WA NT Beginner', sans-serif;
+  font-size: 1.8rem; /* Use rem for better scalability */
+  font-weight: bold;
+  color: #f2f2f2;
+}
+
+.navbar nav {
+  display: flex; /* Use flexbox for better nav layout */
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1rem; /* Use rem for better scalability */
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  transform: translateY(-3px);
+}
+
+.navbar a.active {
+  background-color: var(--accent-color); 
+  color: white;
+}
+
+/* Animation for link hover */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
   }
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 78px;
-    background-color: #333;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
+
+  50% {
+      transform: scale(1.05);
   }
-  
-  .navbar .logo {
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 10px;
+
+  100% {
+      transform: scale(1);
   }
-  
-  .navbar .logo img {
-    height: 70px;
-    margin-right: 10px;
+}
+
+.navbar a:hover {
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
   }
-  
-  .navbar .logo span {
-    font-family: 'Edu VIC WA NT Beginner', sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    padding-right: 100px;
-    font-weight: 800;
-    color: #f2f2f2;
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
-  
-  .navbar a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-    transform: translateY(-3px);
-  }
-  
-  .navbar a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  /* Animation for link hover */
-  @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-  
-    50% {
-        transform: scale(1.05);
-    }
-  
-    100% {
-        transform: scale(1);
-    }
-  }
-  
-  .navbar a:hover {
-    animation: pulse 0.5s ease-in-out;
-  }
-  
-  /* Animation for page load */
-  @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-  
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-  }
-  
-  .navbar {
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  
-  /* End of nav bar */
+}
+
+.navbar {
+  animation: fadeIn 0.5s ease-in-out;
+}
 
 
 
-body {
+.searching-container body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header {
+.searching-container .search-container {
     background-image: url('sourceImg/Malaysia-Travel-search-Banner-Image.jpg');
     background-size: cover;
+    margin: 0;
+    padding: 0;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.search-container {
+.searching-container {
     background: white;
-    padding: 10px;
-    border-radius: 5px;
+
 }
 
-.search-container input {
+.searching-container input {
     padding: 10px;
     width: 300px;
 }
 
-.search-container button {
+.searching-container button {
     padding: 10px 20px;
     background-color: orange;
     border: none;
@@ -176,66 +192,6 @@ header {
     cursor: not-allowed;
 }
 
-<<<<<<< HEAD
-/* Explore book review */
-.user-reviews {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .reviewers {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .reviewer {
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .reviewer img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  
-  .review-panel {
-    position: fixed;
-    right: -300px;
-    top: 0;
-    width: 300px;
-    height: 100%;
-    background-color: #f1f1f1;
-    transition: 0.3s;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .review-panel.active {
-    right: 0;
-  }
-  
-  .close-panel {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    cursor: pointer;
-  }
-  
-  #downloadPdf {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-
-=======
->>>>>>> 6a00e7326ec7396924b20b9aaf987fc0f8a57bad
 
 /* Footer */
 
