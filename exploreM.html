@@ -15,6 +15,11 @@
 </head>
 
 <body>
+    <!--plug in purpose-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0"
+        nonce="d5yclkMm"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
@@ -26,8 +31,8 @@
                 <span>Traveling Malaysia</span>
             </div>
             <nav>
-                <a class="active" href="index.html">Home</a>
-                <a class="" href="exploreM.html">Explore</a>
+                <a href="index.html">Home</a>
+                <a class="active" href="exploreM.html">Explore</a>
                 <a href="">Blog</a>
                 <a href="">About Us</a>
                 <a href="contactUs.html">Contact Us</a>
@@ -54,6 +59,49 @@
 
             <div id="tourList"></div>
         </main>
+
+        <!--Facebook plugin-->
+        <div class="facebook-section">
+            <h2>Follow Tourism Malaysia on Facebook</h2>
+            <p>Stay updated with the latest travel information, events, and beautiful destinations in Malaysia by following the official Tourism Malaysia Facebook page.</p>
+            <div class="fb-page" data-href="https://www.facebook.com/malaysia.travel.my" data-tabs="timeline" data-width="800" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/malaysia.travel.my" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/malaysia.travel.my">Tourism Malaysia</a>
+                </blockquote>
+            </div>
+        </div>
+    
+        <script>
+            // Load Facebook SDK
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    
+            // Animation on scroll
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+    
+            function handleScroll() {
+                var section = document.querySelector('.facebook-section');
+                if (isElementInViewport(section)) {
+                    section.classList.add('visible');
+                }
+            }
+    
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('load', handleScroll);
+        </script>
 
         <!--Footer-->
         <footer class="site-footer">

@@ -192,6 +192,29 @@ body {
     cursor: not-allowed;
 }
 
+/* Facebook Plugin */
+
+.facebook-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.facebook-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.facebook-section h2 {
+  color: #1877f2;
+}
+
+.facebook-section p {
+  margin-bottom: 20px;
+}
 
 /* Footer */
 
