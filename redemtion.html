@@ -7,106 +7,343 @@
     <title>Redemption Center</title>
     <link rel="stylesheet" href="redemption_styles.css">
     <link rel="stylesheet" href="faq.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWSLg4igU7AHyzgHo0T9XnLSiiDdD3YEs&callback=initMap" async defer></script>
 </head>
 
 <body>
     <!-- navigation bar -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
-            <span>Traveling Malaysia</span>
+    <header role="banner">
+        <div class="navbar">
+            <div class="logo">
+                <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
+                <span>Traveling Malaysia</span>
+            </div>
+            <nav>
+                <a class="" href="index.html">Home</a>
+                <a class="active" href="explore.html">Explore</a>
+                <a href="">Blog</a>
+                <a href="">About Us</a>
+                <a href="contactUs.html">Contact Us</a>
+            </nav>
         </div>
-        <nav> 
-            <a class="" href="index.html">Home</a>
-            <a class="active" href="explore.html">Explore</a>
-            <a href="">Blog</a>
-            <a href="">About Us</a>
-            <a href="contactUs.html">Contact Us</a>
-        </nav>
-    </div>
 
 
-    <!--Redemption center part-->
-    <div class="container">
-        <h1>Gift Redemption Centre</h1>
-        <!--Location-->
-        <div class="location-row">
-            <div class="location-card">
-                <img src="/gift/location1.avif" alt="Location 1" class="location-image">
-                <p class="location-name">KL Tower</p>
+        <!-- Redemption Gift Section -->
+        <div id="redemption-center">
+            <h1>Gift Redemption Center</h1>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search for location...">
+                <button id="search-button">Search</button>
             </div>
-            <div class="description">
-                <p>Description of the place ......</p>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/location1.avif" alt="Location 1" class="location-image">
+                        <p class="location-name">KL Tower</p>
+                    </div>
+                    <div class="description">
+                        <p>Situated in the heart of Kuala Lumpur, the KL Tower is one of the most popular spots for the
+                            locals as well as the tourists. This tower is renowned for being the tallest
+                            telecommunication tower in all of Southeast Asia and the 7th tallest tower in the world.</p>
+                    </div>
+                    <button class="map-button" data-address="KL Tower, Kuala Lumpur">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
             </div>
-            <div class="redeem">
-                <button class="redeem-button">Redeem</button>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/sunwaylagoon.avif" alt="Location 2" class="location-image">
+                        <p class="location-name">Sunway Lagoon</p>
+                    </div>
+                    <div class="description">
+                        <p>Beat the heat of Kuala Lumpur and hop in for an extraordinary experience at the magical theme
+                            park of Sunway Lagoon. With six different zones featuring thrilling bungee jumping rides to
+                            classic turbulence water slides, you are in for a treat. Experience the best of 5D cinematic
+                            movies at the waterpark and tune in for a gripping slingshot ride at x park lagoon. </p>
+                    </div>
+                    <button class="map-button" data-address="Sunway Lagoon">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
             </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/twintower.avif" alt="Location 3" class="location-image">
+                        <p class="location-name">Petronas Twin Tower</p>
+                    </div>
+                    <div class="description">
+                        <p>The twin skyscraper in Malaysia held the rank of the tallest building in the world from 1998
+                            to 2004 and is currently known as the tallest twin tower in the world. The twin tower KL
+                            features diamond – faceted façade containing 83,500 stainless steel extrusions. The towers'
+                            interior highlights Malaysia's culture and inspires people through traditional aspects like
+                            carvings and fabric.</p>
+                    </div>
+                    <button class="map-button" data-address="Petronas Twin Tower">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/langkawicable.avif" alt="Location 4" class="location-image">
+                        <p class="location-name">Langkawi Cable Car</p>
+                    </div>
+                    <div class="description">
+                        <p>Langkawi Cable car is also known as the Sky Cab claims to be the steepest cable car ride in
+                            the world; that takes visitors at a height of 708 meters up in the sky, above the sea level.
+                            The cable car carries passengers to Mount Mat Cincang - Langkawi's second highest peak and
+                            thus is considered as one of the must-visit Langkawi attractions. </p>
+                    </div>
+                    <button class="map-button" data-address="Langkawi Cable car">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/malacca.avif" alt="Location 5" class="location-image">
+                        <p class="location-name">Melaka Historic City</p>
+                    </div>
+                    <div class="description">
+                        <p>It is a UNESCO World Heritage Site and the city is filled with historic cathedrals, museums,
+                            rivers, monuments, temples, heritage centres, spas, architectural wonders and many
+                            intricately built places that are hard to miss. Do not miss top attractions like Baba &
+                            Nyonya Heritage Museum, Straits Chinese Jewellery Museum, Jonker Street, Cheng Hoong Teng
+                            Temple, St. Paul’s Hill, Malacca River and Red Square when you come here, as they are top
+                            attractions. </p>
+                    </div>
+                    <button class="map-button" data-address="Melaka Historic City">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/cameron.avif" alt="Location 6" class="location-image">
+                        <p class="location-name">Cameron Highlands</p>
+                    </div>
+                    <div class="description">
+                        <p>Cameron Highlands is the largest hill station in Malaysia and is known for its authentic
+                            mountain climate. The trails here are suitable only for professional trekkers as they are
+                            not maintained properly. </p>
+                    </div>
+                    <button class="map-button" data-address="Cameron Highlands">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/batu.avif" alt="Location 7" class="location-image">
+                        <p class="location-name">Batu Caves, Selangor</p>
+                    </div>
+                    <div class="description">
+                        <p>The Batu Caves is located in the Selangor region of Malaysia. It has one of the famous Hindu
+                            shrines. The shine is of Lord Murugan resides in these caves. A lot of tourists visit this
+                            place as it is a religious site. The natural beauty of this place is mesmerizing. </p>
+                    </div>
+                    <button class="map-button" data-address="Batu Caves, Selangor">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/kinabalu.avif" alt="Location 8" class="location-image">
+                        <p class="location-name">Mount Kinabalu</p>
+                    </div>
+                    <div class="description">
+                        <p>Mount Kinabalu is one of the most prestigious landmarks of Malaysia, as it is regarded as one
+                            of the tallest peaks in South East Asia. Standing at an impressive height of 4096m above sea
+                            level, Mount Kinabalu is a haven for trekkers and adventure enthusiasts. </p>
+                    </div>
+                    <button class="map-button" data-address="Mount Kinabalu">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/tioman.avif" alt="Location 9" class="location-image">
+                        <p class="location-name">Tioman Island</p>
+                    </div>
+                    <div class="description">
+                        <p>Do not be surprised to find monitor lizards and domestic cats in plenty when you come to
+                            Tioman Island. There are lots of white coral reefs here; hence people from all over Malaysia
+                            and the world come to Tioman Island for scuba-diving experiences. Air Batang, Juara and
+                            Genting are the famous villages here. While you are here, try out scuba diving, free diving
+                            and snorkelling. </p>
+                    </div>
+                    <button class="map-button" data-address="Tioman Island">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/penanghill.avif" alt="Location 10" class="location-image">
+                        <p class="location-name">Penang Hill</p>
+                    </div>
+                    <div class="description">
+                        <p>Do not miss Bukit Bendara, a peak which is at a height of 830m above sea level. Due to its
+                            altitude, the climate in Penang Hill is very cool, apt for tourists all through the year.
+                            Lush green plantations, colonial style bungalows, blue peaks all around and a pleasant
+                            climate all through, Penang Hill is an absolute delight for nature lovers. Some of the rare
+                            species of flora and fauna are found here in plenty.
+                        </p>
+                    </div>
+                    <button class="map-button" data-address="Penang Hill">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/sipadan.avif" alt="Location 11" class="location-image">
+                        <p class="location-name">Sipadan Island</p>
+                    </div>
+                    <div class="description">
+                        <p>It is Malaysia’s first and only oceanic island and rises at a height of 600m from the sea
+                            bed. Sipadan Island is a protected island; therefore only 120 scuba divers are allowed on a
+                            daily basis. You can also enjoy snorkelling and live aboarding when you come here. Sipadan
+                            is categorised as one of the “top 5 diving destinations in the world”. </p>
+                    </div>
+                    <button class="map-button" data-address="Sipadan Island">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/china.avif" alt="Location 12" class="location-image">
+                        <p class="location-name">China Town</p>
+                    </div>
+                    <div class="description">
+                        <p>Chinatown is located on Petaling Street, and is where the largest Malay Chinese community can
+                            be seen. This sprawling flea market gets lined up with hundreds of stalls and shop-houses
+                            that sell everything from clothing, accessories, perfumes, decor, batiks, handicrafts, to
+                            some vintage pieces. </p>
+                    </div>
+                    <button class="map-button" data-address="China Town, Kuala Lumpur">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="locations">
+                <div class="location-row">
+                    <div class="location-card">
+                        <img src="/gift/dataran merdeka.avif" alt="Location 13" class="location-image">
+                        <p class="location-name">Dataran Merdeka</p>
+                    </div>
+                    <div class="description">
+                        <p>Dataran Merdeka(Merdeka Square) is where Malaysia announced its independence back in 1957.
+                            Best known for the historical landmark, it is home to many beautiful monuments and
+                            structures, including museums and cathedrals. Merdeka Square is also famous for its rock
+                            concerts. </p>
+                    </div>
+                    <button class="map-button" data-address="Dataran Merdeka">View on Map</button>
+                    <div class="redeem">
+                        <button class="redeem-button">Redeem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="pagination" class="pagination-container"></div>
         </div>
-        <!--Location-->
-        <div class="location-row">
-            <div class="location-card">
-                <img src="/gift/location1.avif" alt="Location 1" class="location-image">
-                <p class="location-name">Location 1</p>
-            </div>
-            <div class="description">
-                <p>Description of the places ......</p>
-            </div>
-            <div class="redeem">
-                <button class="redeem-button">Redeem</button>
-            </div>
-        </div>
-        <!--Location-->
-        <div class="location-row">
-            <div class="location-card">
-                <img src="/gift/location1.avif" alt="Location 1" class="location-image">
-                <p class="location-name">Location 1</p>
-            </div>
-            <div class="description">
-                <p>Description of the place ......</p>
-            </div>
-            <div class="redeem">
-                <button class="redeem-button">Redeem</button>
-            </div>
-        </div>
-        <!--Location-->
-        <div class="location-row">
-            <div class="location-card">
-                <img src="/gift/location1.avif" alt="Location 1" class="location-image">
-                <p class="location-name">Location 1</p>
-            </div>
-            <div class="description">
-                <p>Description of the place ......</p>
-            </div>
-            <div class="redeem">
-                <button class="redeem-button">Redeem</button>
-            </div>
-        </div>
-        <!--Location-->
-        <div class="location-row">
-            <div class="location-card">
-                <img src="/gift/location1.avif" alt="Location 1" class="location-image">
-                <p class="location-name">Location 1</p>
-            </div>
-            <div class="description">
-                <p>Description of the place ......</p>
-            </div>
-            <div class="redeem">
-                <button class="redeem-button">Redeem</button>
-            </div>
-        </div>
+ 
 
         <!-- Repeat the above block for each location -->
 
         <div class="how-to-redeem">
-            <button class="how-to-redeem-button">How to redeem?</button>
+            <button class="how-to-redeem-button"><b>How to Redeem ?</b></button>
+        </div>
+        </div>
+
+        <!--Google Map-->
+        <div id="map" style="height: 400px; width: 100%;"></div>
+
+        <script src="redemption_script.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWSLg4igU7AHyzgHo0T9XnLSiiDdD3YEs&callback=initMap"></script>
+</body>
+<!--Footer-->
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">T&C</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Share</a></li>
+                <li><a href="#">Sign</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Use Cases</h3>
+            <ul>
+                <li><a href="#">Educational Institutions</a></li>
+                <li><a href="#">Professional Services</a></li>
+                <li><a href="#">Freelancers</a></li>
+            </ul>
         </div>
     </div>
+    <div class="footer-bottom">
+        <div class="logo">
+            <img src="sourceImg/TravelLogo.png" alt="Event Company Logo">
+            <span>Traveling Malaysia</span>
+        </div>
+        <div class="copyright">
+            Traveling Malaysia is created by the team at <a href="#">ABCD</a> | © 2024 ABCD ALL RIGHTS RESERVED
+        </div>
+        <div class="cookies-preferences">
+            <button>🍪 Cookies Preferences</button>
+        </div>
+    </div>
+</footer>
 
-    <script src="redemption_script.js"></script>
-</body>
+
 
 </html>
