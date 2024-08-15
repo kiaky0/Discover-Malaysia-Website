@@ -30,5 +30,22 @@ document.getElementById('apply-filter').addEventListener('click', function() {
             guide.style.display = 'none';
         }
     }
-    noResultsMessage.style.display = hasVisibleGuide ? 'none' : 'block';
+    if (!hasVisibleGuide) {
+        window.confirm("No tour guides match your search. Please try different filters.");
+    }
+
+});
+
+document.getElementById('clear-filter').addEventListener('click', function() {
+    // Reset all filters to their default values
+    document.getElementById('location').value = 'all';
+    document.getElementById('language').value = 'english';
+    document.getElementById('experience').value = 'all';
+
+    // Show all tour guides by resetting the filtering
+    const tourGuides = document.querySelectorAll('.tour-guide');
+    tourGuides.forEach(function(guide) {
+        guide.style.display = 'flex'; // Display all guides
+    });
+
 });
