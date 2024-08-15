@@ -63,11 +63,10 @@
   <!--message go out-->
   <section class="features-section">
     <div class="container">
-      <h2 class="section-title pop-out">FEATURES</h2>
-      <h1 class="feature-title pop-out">Seamless calendar scheduling</h1>
+      <h2 class="section-title pop-out">ASIA</h2>
+      <h1 class="feature-title pop-out">Travel Malaysia</h1>
       <p class="feature-description pop-out">
-        Event's scheduling features are built to meet the unique needs
-        of SMBs, ensuring seamless coordination for all your meetings.
+        Travel around to experience the remarkable treasures and the hidden gems in Malaysia. Each state offers a unique Malaysian experience for all. Dynamic cities, fabulous food, beautiful beaches, idyllic islands and national parks with wildlife-packed rainforests – all of this can be found in Malaysia.
       </p>
     </div>
   </section>
@@ -162,9 +161,108 @@
 
   </script>
 
+  <!--message go out 2-->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title pop-out"></h2>
+      <h1 class="feature-title pop-out">Malaysia States</h1>
+      <p class="feature-description pop-out">
+        Check out the beauty of the states in Malaysia
+      </p>
+    </div>
+  </section>
+  <script>
+    const observerTwo = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.pop-out').forEach(element => {
+      observerTwo.observe(element);
+    });
+  </script>
+
+  <!--Slide show description container-->
+  <!--sliding container-->
+  <div class="slideShow-container">
+    <div class="slider">
+      <div class="slides" style="--img: url('sourceImg/img1.jpg')">
+        <div class="content">
+          <h2>Penang</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+            quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+            quaerat! Maiores, possimus corporis?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('sourceImg/img2.jpg')">
+        <div class="content">
+          <h2>KL</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+            quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+            quaerat! Maiores, possimus corporis?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('sourceImg/img3.jpg')">
+        <div class="content">
+          <h2>Terengganu</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+            quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+            quaerat! Maiores, possimus corporis?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('sourceImg/img4.jpg')">
+        <div class="content">
+          <h2>Sabah</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+            quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+            quaerat! Maiores, possimus corporis?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('sourceImg/img5.jpg')">
+        <div class="content">
+          <h2>Sarawak</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+            quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+            quaerat! Maiores, possimus corporis?</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('sourceImg/img6.jpg')">
+        <div class="content">
+          <h2>Perak</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus placeat nobis, ea a eius
+            quae dolorem accusamus id voluptatem inventore dignissimos saepe, asperiores, architecto numquam
+            quaerat! Maiores, possimus corporis?</p>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <span class="prev"></span>
+      <span class="next"></span>
+    </div>
+  </div>
+  <script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slider = document.querySelector('.slider');
+
+    next.addEventListener('click', function () {
+      let slides = document.querySelectorAll('.slides');
+      slider.appendChild(slides[0]);
+    })
+    prev.addEventListener('click', function () {
+      let slides = document.querySelectorAll('.slides');
+      slider.prepend(slides[slides.length - 1]);
+    })
+
+  </script>
+
+
   <!--Explore section-->
   <div class="sights-container">
-    <h2 class="Explore-header">The Stunning Sights and Scenes</h2>
+    <h2 class="Explore-header">Must-See-Attraction</h2>
 
     <button class="explore-button" id="exploreButton">Explore</button>
 
@@ -217,6 +315,72 @@
   </script>
 
   <br>
+
+      <!--Explore book-->
+      <div class="user-reviews">
+        <h1>Download Your Digital Guide</h1>
+        <p>Explore more through the digital book</p>
+
+        <div class="reviewers">
+            <div class="reviewer" data-reviewer="richardo">
+                <img src="exploreImg/book1.jpeg" alt="Richardo icon">
+                <h3>Malaysia Travel Guide 2024</h3>
+                <p>Mr Tan Qi Yang</p>
+            </div>
+            <div class="reviewer" data-reviewer="mahesh">
+                <img src="exploreImg/book2.jpg" alt="Mahesh icon">
+                <h3>Tourism Research</h3>
+                <p>Director Ooi Khai Shen</p>
+            </div>
+            <div class="reviewer" data-reviewer="hayden">
+                <img src="exploreImg/book3.png" alt="Hayden icon">
+                <h3>Malaysia Birdwatching Paradise</h3>
+                <p>Mr Lim Phai Yuan</p>
+            </div>
+        </div>
+
+        <div id="reviewPanel" class="review-panel">
+            <span class="close-panel">&times;</span>
+            <h2 id="reviewerName"></h2>
+            <p id="reviewContent"></p>
+            <button id="downloadPdf">Download PDF</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const reviewers = document.querySelectorAll('.reviewer');
+            const panel = document.getElementById('reviewPanel');
+            const closeBtn = document.querySelector('.close-panel');
+            const reviewerName = document.getElementById('reviewerName');
+            const reviewContent = document.getElementById('reviewContent');
+            const downloadBtn = document.getElementById('downloadPdf');
+
+            const reviews = {
+                richardo: "WorkRamen has a simple UI which makes it easy for my team to use and adapt. Can't wait for the other features coming out.",
+                mahesh: "Great collaboration tool! It has streamlined our workflow significantly.",
+                hayden: "The user-friendly design has made team coordination a breeze. Highly recommended!"
+            };
+
+            reviewers.forEach(reviewer => {
+                reviewer.addEventListener('click', function () {
+                    const reviewerId = this.getAttribute('data-reviewer');
+                    reviewerName.textContent = this.querySelector('h3').textContent;
+                    reviewContent.textContent = reviews[reviewerId];
+                    panel.classList.add('active');
+                });
+            });
+
+            closeBtn.onclick = function () {
+                panel.classList.remove('active');
+            }
+
+            downloadBtn.onclick = function () {
+                alert('PDF successfully downloaded');
+            }
+        });
+    </script>
+
   <!--enquiry section-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -261,7 +425,7 @@
 
   <!-- JavaScript -->
   <script>
-    document.querySelector('.enquiry-button').addEventListener('click', function() {
+    document.querySelector('.enquiry-button').addEventListener('click', function () {
       window.location.href = 'contactUs.html';
     });
 
@@ -281,57 +445,57 @@
     });
   </script>
 
-      <!--Footer-->
-      <footer class="site-footer">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>Company</h3>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">T&C</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Products</h3>
-            <ul>
-              <li><a href="#">Schedule</a></li>
-              <li><a href="#">Share</a></li>
-              <li><a href="#">Sign</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Follow Us</h3>
-            <ul>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Youtube</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Use Cases</h3>
-            <ul>
-              <li><a href="#">Educational Institutions</a></li>
-              <li><a href="#">Professional Services</a></li>
-              <li><a href="#">Freelancers</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <div class="logo">
-            <img src="sourceImg/TravelLogo.png" alt="Event Company Logo">
-            <span>Traveling Malaysia</span>
-          </div>
-          <div class="copyright">
-            Traveling Malaysia is created by the team at <a href="#">ABCD</a> | © 2024 ABCD ALL RIGHTS RESERVED
-          </div>
-          <div class="cookies-preferences">
-            <button>🍪 Cookies Preferences</button>
-          </div>
-        </div>
-      </footer>
+  <!--Footer-->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">T&C</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Share</a></li>
+          <li><a href="#">Sign</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Youtube</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Use Cases</h3>
+        <ul>
+          <li><a href="#">Educational Institutions</a></li>
+          <li><a href="#">Professional Services</a></li>
+          <li><a href="#">Freelancers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="logo">
+        <img src="sourceImg/TravelLogo.png" alt="Event Company Logo">
+        <span>Traveling Malaysia</span>
+      </div>
+      <div class="copyright">
+        Traveling Malaysia is created by the team at <a href="#">ABCD</a> | © 2024 ABCD ALL RIGHTS RESERVED
+      </div>
+      <div class="cookies-preferences">
+        <button>🍪 Cookies Preferences</button>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
