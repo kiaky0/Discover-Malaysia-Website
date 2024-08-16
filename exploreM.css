@@ -192,6 +192,89 @@ body {
     cursor: not-allowed;
 }
 
+.feedback-container {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+}
+
+.feedback-container .header {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.feedback-container .header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feedback-container .feedback {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.feedback-container .feedback.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feedback-container .feedback-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.feedback-container .feedback-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  max-width: 30%;
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-container .feedback-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feedback-container .feedback-card p {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 10px;
+}
+
+.feedback-container .user {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.feedback-container .date {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+}
+
+
 /* Facebook Plugin */
 
 .facebook-section {
@@ -232,7 +315,6 @@ body {
   transform: scale(1.05); /* Slightly enlarge on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
-
 
 /* Footer */
 
