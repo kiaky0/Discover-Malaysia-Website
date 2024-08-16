@@ -33,8 +33,8 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a class="active" href="exploreM.html">Explore</a>
-                <a href="">Blog</a>
-                <a href="">About Us</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About Us</a>
                 <a href="contactUs.html">Contact Us</a>
             </nav>
         </div>
@@ -63,24 +63,27 @@
         <!--Facebook plugin-->
         <div class="facebook-section">
             <h2>Follow Tourism Malaysia on Facebook</h2>
-            <p>Stay updated with the latest travel information, events, and beautiful destinations in Malaysia by following the official Tourism Malaysia Facebook page.</p>
-            <div class="fb-page" data-href="https://www.facebook.com/malaysia.travel.my" data-tabs="timeline" data-width="800" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <p>Stay updated with the latest travel information, events, and beautiful destinations in Malaysia by
+                following the official Tourism Malaysia Facebook page.</p>
+            <div class="fb-page" data-href="https://www.facebook.com/malaysia.travel.my" data-tabs="timeline"
+                data-width="800" data-height="" data-small-header="false" data-adapt-container-width="true"
+                data-hide-cover="false" data-show-facepile="true">
                 <blockquote cite="https://www.facebook.com/malaysia.travel.my" class="fb-xfbml-parse-ignore">
                     <a href="https://www.facebook.com/malaysia.travel.my">Tourism Malaysia</a>
                 </blockquote>
             </div>
         </div>
-    
+
         <script>
             // Load Facebook SDK
-            (function(d, s, id) {
+            (function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) return;
                 js = d.createElement(s); js.id = id;
                 js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
-    
+
             // Animation on scroll
             function isElementInViewport(el) {
                 var rect = el.getBoundingClientRect();
@@ -91,16 +94,75 @@
                     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                 );
             }
-    
+
             function handleScroll() {
                 var section = document.querySelector('.facebook-section');
                 if (isElementInViewport(section)) {
                     section.classList.add('visible');
                 }
             }
-    
+
             window.addEventListener('scroll', handleScroll);
             window.addEventListener('load', handleScroll);
+        </script>
+
+        <!--User Feedback-->
+        <div class="feedback-container">
+            <h1 class="header" id="header">User Feedback</h1>
+            <div class="feedback" id="feedback">
+                <div class="feedback-row">
+                    <div class="feedback-card">
+                        <p>"This product is fantastic! It has changed my life!"</p>
+                        <span class="user">- Jane Doe</span>
+                        <span class="date">March 10, 2023</span>
+                    </div>
+                    <div class="feedback-card">
+                        <p>"Great customer service and fast shipping."</p>
+                        <span class="user">- John Smith</span>
+                        <span class="date">April 5, 2023</span>
+                    </div>
+                    <div class="feedback-card">
+                        <p>"Highly recommend to everyone!"</p>
+                        <span class="user">- Alice Johnson</span>
+                        <span class="date">April 12, 2023</span>
+                    </div>
+                </div>
+                <div class="feedback-row">
+                    <div class="feedback-card">
+                        <p>"Amazing quality and value for money."</p>
+                        <span class="user">- Michael Brown</span>
+                        <span class="date">May 1, 2023</span>
+                    </div>
+                    <div class="feedback-card">
+                        <p>"Exceeded my expectations in every way."</p>
+                        <span class="user">- Sarah Lee</span>
+                        <span class="date">June 15, 2023</span>
+                    </div>
+                    <div class="feedback-card">
+                        <p>"Will definitely be buying again!"</p>
+                        <span class="user">- David Kim</span>
+                        <span class="date">July 20, 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.addEventListener('scroll', function () {
+                const header = document.getElementById('header');
+                const feedbackDiv = document.getElementById('feedback');
+                const headerRect = header.getBoundingClientRect();
+                const feedbackRect = feedbackDiv.getBoundingClientRect();
+                const viewHeight = window.innerHeight;
+
+                if (headerRect.top <= viewHeight && headerRect.bottom >= 0) {
+                    header.classList.add('visible');
+                }
+
+                if (feedbackRect.top <= viewHeight && feedbackRect.bottom >= 0) {
+                    feedbackDiv.classList.add('visible');
+                }
+            });
         </script>
 
         <!--Footer-->
