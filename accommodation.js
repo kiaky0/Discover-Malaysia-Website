@@ -99,7 +99,7 @@ function createAccommodationCard(accommodation) {
                     </p>
                     <p class="card-text"><strong>RM ${accommodation.price}/night</strong></p>
                     <p class="card-text">${accommodation.description}</p>
-                    <a href="#" class="btn btn-primary">Book Now</a> 
+                    <a href="#" class="btn btn-primary book-now-button" data-accommodation-name="${accommodation.name}">Book Now</a> 
                 </div>
             </div>
         </div>
@@ -182,5 +182,14 @@ exploreButton.addEventListener('click', (event) => {
         });
     } else {
         console.error("Error: #accommodations-grid section not found!");
+    }
+});
+
+// Add event listener to all "Book Now" buttons after they are created
+accommodationCardsContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('book-now-button')) {
+        const accommodationName = event.target.dataset.accommodationName;
+        alert(`You have booked ${accommodationName}!`);
+        // You can add further booking logic here, like sending data to a server or updating the UI
     }
 });
