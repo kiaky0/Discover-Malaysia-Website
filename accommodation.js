@@ -95,6 +95,8 @@ function createAccommodationCard(accommodation) {
                     <p class="card-text">
                         ${bedroomIcons} 
                         ${bathroomIcons}
+                    </p>
+                    <p class="card-text">
                         <span class="rating">${ratingStars}</span>
                     </p>
                     <p class="card-text"><strong>RM ${accommodation.price}/night</strong></p>
@@ -127,14 +129,6 @@ function filterAndDisplayAccommodations() {
 
     // Handle empty input for maxPeople
     const maxPeople = maxPeopleInput ? parseInt(maxPeopleInput) : 1;
-
-    // Location mapping (if needed, adjust based on your actual dropdown values)
-    const locationMap = {
-        'all': 'all', 
-        'penang': 'Penang',
-        'kl': 'Kuala Lumpur',
-        'johor': 'Johor'
-    };
 
     const filteredAccommodations = accommodationsData.filter(accommodation => {
         const typeMatch = selectedType === 'all' || accommodation.type === selectedType;
@@ -184,8 +178,6 @@ exploreButton.addEventListener('click', (event) => {
         console.error("Error: #accommodations-grid section not found!");
     }
 });
-
-// Add event listener to all "Book Now" buttons after they are created
 accommodationCardsContainer.addEventListener('click', (event) => {
     if (event.target.classList.contains('book-now-button')) {
         const accommodationName = event.target.dataset.accommodationName;
