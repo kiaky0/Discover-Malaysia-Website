@@ -91,23 +91,32 @@ h1 {
 }
 
 .description {
-    flex-grow: 1; /* Allow the description to take up available space */
+    align-self: flex-start; /* Align the description to the top of the container */
     margin-right: 10px; /* Space between the description and the redeem button */
     margin-left: 10px;
+    margin-top: 0; /* Ensure no extra space at the top */
     text-align: left; /* Align text to the left */
-    text-justify:inter-word;
+    text-justify: inter-word; /* Justify text with spacing between words */
+    padding: 0; /* Remove any extra padding */
 }
 
+/*Redemption button*/
 .redeem {
     margin-left: 10px;
 }
 
 .redeem-button {
     padding: 10px 20px; /* Add padding to the button */
+    width: 100px;
+    height: 50px;
     background-color: #007bff; /* Button color */
+    margin-bottom: 10px;
+    font-size: 15px; /* Larger font size */
+    text-align: center;
+    font-weight: bold;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -115,24 +124,88 @@ h1 {
     background-color: #0056b3; /* Button color on hover */
 }
 
+/*Button container*/
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 /* How to redeem button styling */
 .how-to-redeem {
-    text-align: center;
-    margin-top: 20px;
+    position: fixed; /* Fix the position */
+    right: 20px; /* Distance from the right edge */
+    bottom: 20px; /* Distance from the bottom edge */
+    z-index: 1001; /* Ensure it's above the modal */
 }
 
 .how-to-redeem-button {
-    background-color: #1e90ff;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 18px;
+    padding: 15px 30px; /* Increase padding for a larger button */
+    font-size: 30px; /* Larger font size */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    animation: zoomInOut 2s infinite; /* Apply the zoom animation */
 }
 
 .how-to-redeem-button:hover {
-    background-color: #1c86ee;
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Keyframes for zoom-in and zoom-out animation */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.1); /* Zoom in */
+    }
+    100% {
+        transform: scale(1); /* Back to original size */
+    }
+}
+
+/*Used for the insturction images style*/
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; /* Ensure it appears on top */
+    overflow: hidden; /* Hide scrollbars */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 1; /* Behind the content */
+}
+
+.modal-content {
+    position: relative;
+    z-index: 2; /* On top of the overlay */
+}
+
+.redeem-image {
+    display: block; /* Display image */
+    width: 500px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: auto; /* Center the image horizontally */
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }
 
 /*Google Map*/
@@ -142,3 +215,28 @@ h1 {
     margin-bottom: 20px; /* Add space below the map */
     margin-top: 20px;
 }
+
+/* Style for the map button */
+.map-button {
+    display: block; /* Ensure the button takes the full width available */
+    width: 100px; /* Adjust width as needed, or use a fixed width if desired */
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px 20px; /* Increase padding for a larger button */
+    font-size: 20px; /* Larger font size */
+    font-weight: bold;
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-top: 0px; /* Space above the button */
+}
+
+.map-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+

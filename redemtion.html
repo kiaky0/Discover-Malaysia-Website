@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWSLg4igU7AHyzgHo0T9XnLSiiDdD3YEs&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWSLg4igU7AHyzgHo0T9XnLSiiDdD3YEs&callback=initMap"
+        async defer></script>
 </head>
 
 <body>
@@ -22,11 +23,11 @@
                 <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
                 <span>Traveling Malaysia</span>
             </div>
-            <nav>
-                <a class="" href="index.html">Home</a>
-                <a class="active" href="explore.html">Explore</a>
-                <a href="">Blog</a>
-                <a href="">About Us</a>
+            <nav> 
+                <a class="active" href="index.html">Home</a>
+                <a class="" href="exploreM.html">Explore</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="about.html">About Us</a>
                 <a href="contactUs.html">Contact Us</a>
             </nav>
         </div>
@@ -50,9 +51,11 @@
                             locals as well as the tourists. This tower is renowned for being the tallest
                             telecommunication tower in all of Southeast Asia and the 7th tallest tower in the world.</p>
                     </div>
-                    <button class="map-button" data-address="KL Tower, Kuala Lumpur">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemkl" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="KL Tower, Kuala Lumpur">Map</button>
                     </div>
                 </div>
             </div>
@@ -68,10 +71,13 @@
                             classic turbulence water slides, you are in for a treat. Experience the best of 5D cinematic
                             movies at the waterpark and tune in for a gripping slingshot ride at x park lagoon. </p>
                     </div>
-                    <button class="map-button" data-address="Sunway Lagoon">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemsunway" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Sunway Lagoon">Map</button>
                     </div>
+
                 </div>
             </div>
             <div id="locations">
@@ -87,9 +93,11 @@
                             interior highlights Malaysia's culture and inspires people through traditional aspects like
                             carvings and fabric.</p>
                     </div>
-                    <button class="map-button" data-address="Petronas Twin Tower">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeempetronas" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Petronas Twin Tower">Map</button>
                     </div>
                 </div>
             </div>
@@ -105,9 +113,11 @@
                             The cable car carries passengers to Mount Mat Cincang - Langkawi's second highest peak and
                             thus is considered as one of the must-visit Langkawi attractions. </p>
                     </div>
-                    <button class="map-button" data-address="Langkawi Cable car">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemlangkawi" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Langkawi Cable car">Map</button>
                     </div>
                 </div>
             </div>
@@ -122,12 +132,14 @@
                             rivers, monuments, temples, heritage centres, spas, architectural wonders and many
                             intricately built places that are hard to miss. Do not miss top attractions like Baba &
                             Nyonya Heritage Museum, Straits Chinese Jewellery Museum, Jonker Street, Cheng Hoong Teng
-                            Temple, St. Paul’s Hill, Malacca River and Red Square when you come here, as they are top
+                            Temple, St. Paul's Hill, Malacca River and Red Square when you come here, as they are top
                             attractions. </p>
                     </div>
-                    <button class="map-button" data-address="Melaka Historic City">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemmelaka" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Melaka Historic City">Map</button>
                     </div>
                 </div>
             </div>
@@ -142,9 +154,11 @@
                             mountain climate. The trails here are suitable only for professional trekkers as they are
                             not maintained properly. </p>
                     </div>
-                    <button class="map-button" data-address="Cameron Highlands">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemcameron" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Cameron Highlands">Map</button>
                     </div>
                 </div>
             </div>
@@ -159,9 +173,11 @@
                             shrines. The shine is of Lord Murugan resides in these caves. A lot of tourists visit this
                             place as it is a religious site. The natural beauty of this place is mesmerizing. </p>
                     </div>
-                    <button class="map-button" data-address="Batu Caves, Selangor">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeembatu" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Batu Caves, Selangor">Map</button>
                     </div>
                 </div>
             </div>
@@ -176,9 +192,11 @@
                             of the tallest peaks in South East Asia. Standing at an impressive height of 4096m above sea
                             level, Mount Kinabalu is a haven for trekkers and adventure enthusiasts. </p>
                     </div>
-                    <button class="map-button" data-address="Mount Kinabalu">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemmount" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Mount Kinabalu">Map</button>
                     </div>
                 </div>
             </div>
@@ -195,9 +213,11 @@
                             Genting are the famous villages here. While you are here, try out scuba diving, free diving
                             and snorkelling. </p>
                     </div>
-                    <button class="map-button" data-address="Tioman Island">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemtioman" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Tioman Island">Map</button>
                     </div>
                 </div>
             </div>
@@ -215,9 +235,11 @@
                             species of flora and fauna are found here in plenty.
                         </p>
                     </div>
-                    <button class="map-button" data-address="Penang Hill">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeempenang" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Penang Hill">Map</button>
                     </div>
                 </div>
             </div>
@@ -233,9 +255,11 @@
                             daily basis. You can also enjoy snorkelling and live aboarding when you come here. Sipadan
                             is categorised as one of the “top 5 diving destinations in the world”. </p>
                     </div>
-                    <button class="map-button" data-address="Sipadan Island">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemsipadan" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Sipadan Island">Map</button>
                     </div>
                 </div>
             </div>
@@ -251,9 +275,11 @@
                             that sell everything from clothing, accessories, perfumes, decor, batiks, handicrafts, to
                             some vintage pieces. </p>
                     </div>
-                    <button class="map-button" data-address="China Town, Kuala Lumpur">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemchina" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="China Town, Kuala Lumpur">Map</button>
                     </div>
                 </div>
             </div>
@@ -269,28 +295,36 @@
                             structures, including museums and cathedrals. Merdeka Square is also famous for its rock
                             concerts. </p>
                     </div>
-                    <button class="map-button" data-address="Dataran Merdeka">View on Map</button>
-                    <div class="redeem">
-                        <button class="redeem-button">Redeem</button>
+                    <div class="button-container">
+                        <div class="redeem">
+                            <button id="redeemdataran" class="redeem-button">Redeem</button>
+                        </div>
+                        <button class="map-button" data-address="Dataran Merdeka">Map</button>
                     </div>
                 </div>
             </div>
             <div id="pagination" class="pagination-container"></div>
         </div>
- 
 
-        <!-- Repeat the above block for each location -->
+
+        <!-- Repeat the above block for each redemption -->
 
         <div class="how-to-redeem">
             <button class="how-to-redeem-button"><b>How to Redeem ?</b></button>
         </div>
+        <div id="redeem-modal" class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <img id="redeem-image" class="redeem-image" src="gift/claim.PNG" alt="How to Redeem">
+            </div>
         </div>
 
         <!--Google Map-->
         <div id="map" style="height: 400px; width: 100%;"></div>
 
         <script src="redemption_script.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWSLg4igU7AHyzgHo0T9XnLSiiDdD3YEs&callback=initMap"></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWSLg4igU7AHyzgHo0T9XnLSiiDdD3YEs&callback=initMap"></script>
 </body>
 <!--Footer-->
 <footer class="site-footer">
