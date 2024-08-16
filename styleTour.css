@@ -1,3 +1,4 @@
+/* Style for text in banner */
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -5,7 +6,7 @@ header {
   padding: 20px;
   color: #fff; /* White text color */
   z-index: 1; /* Ensure text is above background image and overlay */
-  height: 280px;
+  height: 300px;
 }
 
 header::before {
@@ -45,6 +46,7 @@ header .tagline {
   font-weight: 300; /* Light font weight for a subtle effect */
 }
 
+/* Style for filter list */
 #filter-container {
   text-align: center;
   margin-top: 10px; /* Space between the heading and the filter options */
@@ -88,7 +90,7 @@ header .tagline {
   flex-grow: 1; /* Makes sure the div takes up the remaining space */
   display: flex;
   flex-direction: column;
-  margin-left: ;
+  margin-left: 0px;
 }
 
 /* Tour guide name */
@@ -107,6 +109,7 @@ header .tagline {
 .filter-buttons {
   text-align: center; /* Align buttons to the right */
   margin-top: 0px; /* Space between filters and buttons */
+  width: auto;
 
 }
 
