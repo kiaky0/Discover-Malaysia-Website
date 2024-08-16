@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="destination.css">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- navigation bar -->
+    <header role="banner">
+        <div class="navbar">
+            <div class="logo">
+                <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
+                <span>Traveling Malaysia</span>
+            </div>
+            <nav>
+                <a class="active" href="index.html">Home</a>
+                <a class="" href="exploreM.html">Explore</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About Us</a>
+                <a href="contactUs.html">Contact Us</a>
+            </nav>
+        </div>
+
+
+        <div class="destinations-section">
+            <h2>Popular places to visit in Malaysia</h2>
+            <p>Featuring heavily on our itinerary ideas for visiting Malaysia, these places are destinations that we
+                know
+                prove consistently popular with our travellers. How you choose to include them in your trip can be
+                tailored
+                into a route that best suits your preferences.</p>
+
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="sourceImg/img2.jpg" alt="Kuala Lumpur">
+                    <h3>Kuala Lumpur</h3>
+                </div>
+                <div class="destination-card">
+                    <img src="sourceImg/img1.jpg" alt="Penang">
+                    <h3>Penang</h3>
+                </div>
+                <div class="destination-card">
+                    <img src="sourceImg/Langkawi.jpg" alt="Langkawi">
+                    <h3>Langkawi</h3>
+                </div>
+                <div class="destination-card">
+                    <img src="sourceImg/Melacca.jpg" alt="Malacca">
+                    <h3>Malacca</h3>
+                </div>
+            </div>
+        </div>
+
+        <!--More destination-->
+        <div class="more-destinations-section">
+            <h2>More Destinations in Malaysia</h2>
+            <div class="places">
+                <div class="place-card">
+                    <h3>Terengganu</h3>
+                    <img src="sourceImg/img3.jpg" alt="Borneo">
+                    <p>Borneo, the third-largest island in the world, offers a unique experience with its lush
+                        rainforests,
+                        diverse wildlife, and rich cultural heritage. It’s a paradise for nature lovers.</p>
+                </div>
+                <div class="place-card">
+                    <h3>Mount Kinabalu</h3>
+                    <img src="sourceImg/mount-kinabalu.jpg" alt="Perhentian Islands">
+                    <p>The Perhentian Islands are famous for their crystal-clear waters, vibrant coral reefs, and
+                        relaxed
+                        atmosphere. It’s an ideal destination for snorkeling and beach relaxation.</p>
+                </div>
+                <div class="place-card">
+                    <h3>Taman Negara</h3>
+                    <img src="sourceImg/Taman_Negara_forest.jpg" alt="Tioman Island">
+                    <p>Tioman Island is a tropical paradise known for its beautiful beaches, dense rainforests, and
+                        stunning
+                        underwater life. A great spot for diving and adventure activities.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function throttle(fn, wait) {
+                let time = Date.now();
+                return function () {
+                    if ((time + wait - Date.now()) < 0) {
+                        fn();
+                        time = Date.now();
+                    }
+                };
+            }
+
+            function handleScroll() {
+                const section = document.querySelector('.more-destinations-section');
+                if (isElementInViewport(section)) {
+                    section.classList.add('visible');
+                }
+            }
+
+            window.addEventListener('scroll', throttle(handleScroll, 100));
+            window.addEventListener('load', handleScroll);
+
+        </script>
+
+        <!--message go out 2-->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title pop-out"></h2>
+                <h1 class="feature-title pop-out">Malaysia States</h1>
+                <p class="feature-description pop-out">
+                    Check out the beauty of the states in Malaysia
+                </p>
+            </div>
+        </section>
+        <script>
+            const observerTwo = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.pop-out').forEach(element => {
+                observerTwo.observe(element);
+            });
+        </script>
+        <!--Slide show description container-->
+        <!--sliding container-->
+        <div class="slideShow-container">
+            <div class="slider">
+                <div class="slides" style="--img: url('sourceImg/penangMural.jpg')">
+                    <div class="content">
+                        <h2>Penang</h2>
+                        <p>Penang, known as the "Pearl of the Orient," is a state in Peninsular Malaysia on northwest
+                            coast.
+                            It consists of Penang Island, where the capital city George Town is located, and Seberang
+                            Perai
+                            on the mainland.
+                            With its rich history, diverse culture, and stunning natural beauty, Penang has become a top
+                            tourist destination for both
+                            international tourists and Malaysians themselves.</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('sourceImg/kualaLumpur.jpg')">
+                    <div class="content">
+                        <h2>KL</h2>
+                        <p>Known for its skyscrapers, cultural diversity, good food, and unique sights, Kuala Lumpur is
+                            Malaysia's vibrant capital city that bustles with excitement
+                            from day to night. Go on a street food hunt, visit iconic sites, visit a water park, or
+                            escape
+                            the heat with a day trip to Genting Highlands,
+                            there's just so much to eat, see and do in Kuala Lumpur!</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('sourceImg/kualaTerengganu.jpg')">
+                    <div class="content">
+                        <h2>Terengganu</h2>
+                        <p>Terengganu is a well-established tropical gateway, with world-class island destinations,
+                            natural
+                            ecotourism attractions,
+                            urban and coastal tourism offerings and rich arts, culture and heritage.</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('sourceImg/sabahFarm.jpg')">
+                    <div class="content">
+                        <h2>Sabah</h2>
+                        <p>Sabah is a picturesque state of Malaysia; one of the thirteen that make up the whole country.
+                            This eastern most state
+                            is best known for its natural tropical beauty, a far reaching history and its art culture.
+                            Surprisingly, it is also known as
+                            the land below the wind, because of its closeness to the typhoon region of Philippines. Over
+                            the
+                            years, the popularity of this
+                            beautiful place has risen drastically, especially since people are looking for newer places
+                            to
+                            enjoy their vacations. </p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('sourceImg/sarawakNight.jpg')">
+                    <div class="content">
+                        <h2>Sarawak</h2>
+                        <p>Sarawak, the Land of the Hornbills, there is so much more Sarawak can offer than what meets
+                            the
+                            eye. Home to 34 ethnic groups,
+                            Sarawak is a unique plethora of culture, adventure, nature, food, and festivals (CANFF). It
+                            is
+                            the place where the journey of
+                            endless exploration starts.
+                        </p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('sourceImg/castle.jpg')">
+                    <div class="content">
+                        <h2>Perak</h2>
+                        <p>Perak is one of the states of Malaysia and boasts of being the second largest state by size
+                            in
+                            Peninsular Malaysia. Perak borders Thai Yala
+                            Province and Kedah to the north, Pahang and Kelantan to the east, Penang to its northwest
+                            and
+                            Straits of Malacca to its west and Selangor to
+                            its north. Ipoh is the administrative capital of Perak and has a historical reputation for
+                            its
+                            top-notch tin-mining activities. This was until
+                            there was a drop in the price of tin which severely affected the econonmy of the state.
+                            However,
+                            Kuala Kangsar is still home to the royal capital
+                            and this is the location of the Palace of Sultan of Perak.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+        </div>
+        <script>
+            let next = document.querySelector('.next');
+            let prev = document.querySelector('.prev');
+            let slider = document.querySelector('.slider');
+
+            next.addEventListener('click', function () {
+                let slides = document.querySelectorAll('.slides');
+                slider.appendChild(slides[0]);
+            })
+            prev.addEventListener('click', function () {
+                let slides = document.querySelectorAll('.slides');
+                slider.prepend(slides[slides.length - 1]);
+            })
+
+        </script>
+
+
+        <!--Footer-->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">T&C</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Schedule</a></li>
+                        <li><a href="#">Share</a></li>
+                        <li><a href="#">Sign</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Youtube</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Use Cases</h3>
+                    <ul>
+                        <li><a href="#">Educational Institutions</a></li>
+                        <li><a href="#">Professional Services</a></li>
+                        <li><a href="#">Freelancers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="logo">
+                    <img src="sourceImg/TravelLogo.png" alt="Event Company Logo">
+                    <span>Traveling Malaysia</span>
+                </div>
+                <div class="copyright">
+                    Traveling Malaysia is created by the team at <a href="#">ABCD</a> | © 2024 ABCD ALL RIGHTS RESERVED
+                </div>
+                <div class="cookies-preferences">
+                    <button>🍪 Cookies Preferences</button>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="destination.js"></script>
+</body>
+
+</html>
