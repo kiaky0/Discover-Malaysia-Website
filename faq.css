@@ -96,7 +96,7 @@ body {
 
 /* Hero Section */
 .faq-hero {
-  background-image: url("sourceImg/faq.png");
+  background-image: url("sourceImg/faq.jpg");
   background-size: cover;
   background-position: center;
   padding: 80px 0; /* Adjust padding as needed */
