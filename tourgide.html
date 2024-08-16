@@ -4,34 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tour Guide List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styleTour.css">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <!--google font-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+  <title>Tour Guide List</title>
 </head>
 
 <body>
 
 
   <!-- navigation bar -->
-  <div class="navbar">
-    <div class="logo">
-      <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
-      <span>Traveling Malaysia</span>
+    <div class="navbar">
+        <div class="logo">
+            <img src="sourceImg/TravelLogo.png" alt="Travel Malaysia Logo">
+            <span>Traveling Malaysia</span>
+        </div>
+        <nav> 
+            <a class="active" href="index.html">Home</a>
+            <a class="" href="exploreM.html">Explore</a>
+            <a href="">Blog</a>
+            <a href="">About Us</a>
+            <a href="contactUs.html">Contact Us</a>
+        </nav>
     </div>
-    <a class="" href="index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="">Blog</a>
-    <a href="">About Us</a>
-    <a href="contactUs.html">Contact Us</a>
-  </div>
-
+  <!-- Text in the banner-->
   <header>
     <h1>Book your own private tour guide right now in Malaysia!!</h1>
     <p class="tagline">Our website guarantees 100% safety with our tour guides. Book a tour guide for a more
@@ -80,6 +84,7 @@
     </div>
   </header>
 
+  <!--Tour Guide List-->
   <div id="tour-guides">
     <div class="tour-guide" data-location="Penang,Perlis" data-language="chinese,english,malay" data-experience="1-3">
       <img src="Touguide/qy.png" alt="Guide 1">
@@ -93,6 +98,7 @@
           the best food spots in Penang and Perlis.</p>
       </div>
     </div>
+
     <div class="tour-guide" data-location="Penang,KualaLumpur" data-language="chinese,english" data-experience="4-6">
       <img src="Touguide/ky.png" alt="Guide 1">
       <div> <!-- Wrapping all text info in a div -->
@@ -105,6 +111,7 @@
           the best spots in Penang and Kuala Lumpur, and I'll make sure you have a good trip.</p>
       </div>
     </div>
+
     <div class="tour-guide" data-location="Penang" data-language="malay" data-experience="7-10">
       <img src="Touguide/py.png" alt="Guide 1">
       <div> <!-- Wrapping all text info in a div -->
@@ -117,6 +124,7 @@
           I'll show you the hidden gems and must-visit spots, ensuring you have an unforgettable journey.</p>
       </div>
     </div>
+
     <div class="tour-guide" data-location="Johor" data-language="english" data-experience="7-10">
       <img src="Touguide/ks.png" alt="Guide 1">
       <div> <!-- Wrapping all text info in a div -->
@@ -129,6 +137,7 @@
           best attractions and local secrets, making your trip truly memorable.</p>
       </div>
     </div>
+
     <div class="tour-guide" data-location="Sabah,Sarawak" data-language="malay,english" data-experience="7-10">
       <img src="Touguide/guide1.jpg" alt="Guide 1">
       <div> <!-- Wrapping all text info in a div -->
@@ -141,6 +150,7 @@
           unforgettable experience! </p>
       </div>
     </div>
+
     <div class="tour-guide" data-location="Kedah" data-language="english" data-experience="1-3">
       <img src="Touguide/girlguide1.jpg" alt="Guide 1">
       <div> <!-- Wrapping all text info in a div -->
@@ -153,6 +163,7 @@
           the trip. Let's have a great time together!</p>
       </div>
     </div>
+
     <div class="tour-guide" data-location="Malacca" data-language="english" data-experience="4-6">
       <img src="Touguide/boyguide1.jpg" alt="Guide 1">
       <div> <!-- Wrapping all text info in a div -->
@@ -165,6 +176,7 @@
           special chicken rice and create great memories together!</p>
       </div>
     </div>
+
     <div class="tour-guide" data-location="Selangor" data-language="english,chinese,malay" data-experience="1-3">
       <img src="Touguide/girlguide2.jfif" alt="Guide 1">
       <div> <!-- Wrapping all text info in a div -->
@@ -177,6 +189,7 @@
           sharing some fantastic experiences. Let's make this trip together!</p>
       </div>
     </div>
+
     <div class="tour-guide" data-location="Pahang" data-language="english,chinese" data-experience="4-6">
       <img src="Touguide/girlguide3.jfif" alt="Guide 1">
       <div> <!-- Wrapping all text info in a div -->
@@ -189,6 +202,7 @@
           and let's make some great memories together!</p>
       </div>
     </div>
+
     <div class="tour-guide" data-location="Terengganu" data-language="malay" data-experience="7-10">
       <img src="Touguide/boyguide2.avif" alt="Guide 1">
       <div> <!-- Wrapping all text info in a div -->
@@ -201,12 +215,8 @@
           pengalaman trip yang hebat!</p>
       </div>
     </div>
+    
     <!-- Add more tour guides as needed -->
-    <!-- No results message -->
-    <!--<div id="no-results">
-            <img src="Touguide/sorry.png" alt="Sorry" class="sorry-image">
-            <p>Sorry, there are currently no tour guides available with these filters.</p>
-        </div>-->
 
   </div>
   <script src="scriptTour.js"></script>

@@ -1,4 +1,4 @@
-// script.js
+//Script for filter button function
 document.getElementById('filter-button').addEventListener('click', function () {
     var filters = document.getElementById('filters');
     filters.style.display = (filters.style.display === 'none') ? 'block' : 'none';
@@ -122,8 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* Clear Cookie Function
-// Clear the cookie
+//Clear Cookie Function
+/* Clear the cookie banner
 function clearCookie(name) {
   document.cookie = name + '=; Max-Age=-99999999; path=/';
 }
