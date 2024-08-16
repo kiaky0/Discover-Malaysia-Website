@@ -95,6 +95,8 @@ function createAccommodationCard(accommodation) {
                     <p class="card-text">
                         ${bedroomIcons} 
                         ${bathroomIcons}
+                    </p>
+                    <p class="card-text">
                         <span class="rating">${ratingStars}</span>
                     </p>
                     <p class="card-text"><strong>RM ${accommodation.price}/night</strong></p>
@@ -113,6 +115,14 @@ const accommodationCardsContainer = document.getElementById('accommodation-cards
 const priceRangeSlider = document.getElementById('price-range');
 const priceValueDisplay = document.getElementById('price-value');
 
+// Location mapping for filtering
+const locationMap = {
+    "all": "all",
+    "penang": "Penang",
+    "kl": "Kuala Lumpur",
+    "johor": "Johor"
+};
+
 // Update displayed price value when slider changes
 priceRangeSlider.addEventListener('input', () => {
     priceValueDisplay.textContent = `RM ${priceRangeSlider.value}`;
@@ -122,24 +132,16 @@ priceRangeSlider.addEventListener('input', () => {
 function filterAndDisplayAccommodations() {
     const selectedType = document.getElementById('accommodation-type').value;
     const selectedLocation = document.getElementById('location').value;
-    const maxPrice = parseInt(priceRangeSlider.value); 
+    const maxPrice = parseInt(priceRangeSlider.value);
     const maxPeopleInput = document.getElementById('max-people').value;
 
     // Handle empty input for maxPeople
     const maxPeople = maxPeopleInput ? parseInt(maxPeopleInput) : 1;
 
-    // Location mapping (if needed, adjust based on your actual dropdown values)
-    const locationMap = {
-        'all': 'all', 
-        'penang': 'Penang',
-        'kl': 'Kuala Lumpur',
-        'johor': 'Johor'
-    };
-
     const filteredAccommodations = accommodationsData.filter(accommodation => {
         const typeMatch = selectedType === 'all' || accommodation.type === selectedType;
         const locationMatch = selectedLocation === 'all' || accommodation.location === locationMap[selectedLocation];
-        const priceMatch = accommodation.maxPrice <= maxPrice; 
+        const priceMatch = accommodation.maxPrice <= maxPrice;
         const peopleMatch = accommodation.maxPeople >= maxPeople;
 
         return typeMatch && locationMatch && priceMatch && peopleMatch;
@@ -147,15 +149,18 @@ function filterAndDisplayAccommodations() {
 
     if (filteredAccommodations.length === 0) {
         // No accommodations found
-        accommodationCardsContainer.innerHTML = '<h5 class="text-center" style="color: blue;">Apologies, no accommodations match your search criteria. Please try again.</h5>'; 
+        accommodationCardsContainer.innerHTML = '<h5 class="text-center" style="color: blue;">Apologies, no accommodations match your search criteria. Please try again.</h5>';
     } else {
         // Display the filtered accommodations
-        accommodationCardsContainer.innerHTML = ''; 
+        accommodationCardsContainer.innerHTML = '';
         filteredAccommodations.forEach(accommodation => {
             const cardHtml = createAccommodationCard(accommodation);
             accommodationCardsContainer.innerHTML += cardHtml;
         });
     }
+
+    // Update displayed price value initially
+    priceValueDisplay.textContent = `RM ${priceRangeSlider.value}`;
 }
 
 // Add event listener to the filter button
@@ -165,19 +170,18 @@ document.getElementById('filter-button').addEventListener('click', filterAndDisp
 filterAndDisplayAccommodations();
 
 // Smooth scrolling for the "Explore Accommodations" button
-const exploreButton = document.getElementById('explore-button'); 
+const exploreButton = document.getElementById('explore-button');
 
 exploreButton.addEventListener('click', (event) => {
-    event.preventDefault(); 
-    console.log("Explore Accommodations button clicked!"); 
+    event.preventDefault();
 
     const accommodationsGrid = document.getElementById('accommodations-grid');
     if (accommodationsGrid) {
-        const navbarHeight = document.querySelector('.navbar').offsetHeight; 
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
         const scrollTop = accommodationsGrid.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
         window.scrollTo({
-            top: scrollTop, 
+            top: scrollTop,
             behavior: 'smooth'
         });
     } else {
@@ -185,11 +189,11 @@ exploreButton.addEventListener('click', (event) => {
     }
 });
 
-// Add event listener to all "Book Now" buttons after they are created
+// Book Now button click handler
 accommodationCardsContainer.addEventListener('click', (event) => {
     if (event.target.classList.contains('book-now-button')) {
         const accommodationName = event.target.dataset.accommodationName;
         alert(`You have booked ${accommodationName}!`);
-        // You can add further booking logic here, like sending data to a server or updating the UI
+        // You can add further booking logic here
     }
 });
