@@ -195,9 +195,10 @@ body {
 /* Facebook Plugin */
 
 .facebook-section {
-  max-width: 800px;
+  max-width: 900px;
   margin: 50px auto;
   padding: 20px;
+  text-align: center; /* Center align text and content */
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -205,16 +206,33 @@ body {
 
 .facebook-section.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(10px);
 }
 
 .facebook-section h2 {
-  color: #1877f2;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 200;
+  color: #000000;
+  margin-bottom: 10px;
 }
 
 .facebook-section p {
+  font-family: 'Poppins', sans-serif; 
   margin-bottom: 20px;
 }
+
+.fb-page {
+  width: 500px;
+  align-items: center;
+  display: inline-block; /* Center align the Facebook plugin */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.fb-page:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
 
 /* Footer */
 
