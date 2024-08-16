@@ -29,3 +29,6 @@ function handleScroll() {
 // Throttle the scroll event listener for smoother animations
 window.addEventListener('scroll', throttle(handleScroll, 100));
 window.addEventListener('load', handleScroll);
+
+
+
