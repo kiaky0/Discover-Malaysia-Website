@@ -6,78 +6,113 @@ body {
     background-color: #f4f4f4;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    background-color: white;
-    border: 2px solid #4CAF50;
-    border-radius: 8px;
-}
-
 h1 {
     text-align: center;
     color: #4CAF50;
 }
 
-/* Layout for each location row */
-.location-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-/* Card containing the image and location name */
-.location-card {
-    flex: 1;
+/* Center the Redemption Center content */
+#redemption-center {
     text-align: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Increase the max-width to allow more space */
+    width: 100%; /* Ensure it uses full available width */
+    padding: 0 20px; /* Add padding to ensure content doesn't touch the edges */
 }
 
-/* Image size control */
-.location-image {
-    width: 125px;  /* Set the width of the image */
-    height: 125px; /* Set the height of the image */
-    border-radius: 8px; /* Optional: round the corners */
-    object-fit: cover;  /* Ensure the image covers the entire area without distortion */
+/* Center the Search Container */
+#search-container {
+    margin: 0 auto 20px; /* Center it horizontally and add bottom margin */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    max-width: 600px; /* Increase this to control the search container width */
+    width: 100%; /* Ensure it uses full available width */
 }
 
-/* Location name below the image */
-.location-name {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-/* Description section */
-.description {
-    flex: 2;
-    padding-left: 20px;
-}
-
-/* Redeem button section */
-.redeem {
-    flex: 1;
-    text-align: right;
-}
-
-.redeem-button {
-    background-color: #4CAF50;
-    width:100px;
-    height: 100px;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
+#search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px; /* Adjust width to your preference */
     margin-right: 10px;
 }
 
+#search-button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Center the Locations Container */
+#locations {
+    display: flex;
+    flex-direction: column; /* Stack the locations vertically */
+    align-items: center; /* Center all the location items */
+}
+
+/* Make each location row responsive */
+.location-row {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Add space between each item */
+    margin-bottom: 20px; /* Add some space between rows */
+    background-color: #ffffff; /* Add background color to the location row */
+    padding: 15px; /* Add padding inside the location row */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    width: 100%; /* Make the container use full available width */
+    max-width: 2000px; /* Set a max-width to control the maximum width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Align items within each location-row */
+.location-card {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
+    text-align: center; /* Center text inside each card */
+}
+
+.location-card img.location-image {
+    width: 300px; /* Adjust the image width */
+    height: auto; /* Maintain the image aspect ratio */
+    margin-bottom: 10px; /* Add space between the image and the location name */
+}
+
+.location-card .location-name {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center; /* Center the text under the image */
+    margin: 0; /* Remove default margins */
+}
+
+.description {
+    flex-grow: 1; /* Allow the description to take up available space */
+    margin-right: 10px; /* Space between the description and the redeem button */
+    margin-left: 10px;
+    text-align: left; /* Align text to the left */
+    text-justify:inter-word;
+}
+
+.redeem {
+    margin-left: 10px;
+}
+
+.redeem-button {
+    padding: 10px 20px; /* Add padding to the button */
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .redeem-button:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Button color on hover */
 }
 
 /* How to redeem button styling */
@@ -98,4 +133,12 @@ h1 {
 
 .how-to-redeem-button:hover {
     background-color: #1c86ee;
+}
+
+/*Google Map*/
+#map {
+    height: 500px; /* Adjust the height as needed */
+    width: 100%; /* Ensure it takes the full width of its container */
+    margin-bottom: 20px; /* Add space below the map */
+    margin-top: 20px;
 }

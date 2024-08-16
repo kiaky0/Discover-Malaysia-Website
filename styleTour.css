@@ -5,7 +5,7 @@ header {
   padding: 20px;
   color: #fff; /* White text color */
   z-index: 1; /* Ensure text is above background image and overlay */
-  height: 250px;
+  height: 280px;
 }
 
 header::before {
