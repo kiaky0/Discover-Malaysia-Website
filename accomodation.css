@@ -1,0 +1,359 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+ 
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color); 
+    background-color: var(--light-bg); 
+}
+ 
+:root {
+    --primary-color: #007bff; 
+    --secondary-color: #333;
+    --text-color: #333;
+    --light-bg: #f0f0f0;
+    --accent-color: #f25a70; 
+}
+ 
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    height: 78px;
+    background-color: var(--secondary-color); 
+    overflow: hidden;
+    padding: 0 20px; 
+}
+ 
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+ 
+.navbar .logo img {
+    height: 70px;
+    margin-right: 10px;
+}
+ 
+.navbar .logo span {
+    font-family: 'Edu VIC WA NT Beginner', sans-serif;
+    font-size: 1.8rem; 
+    font-weight: bold;
+    color: #f2f2f2;
+}
+ 
+.navbar nav {
+    display: flex; 
+}
+ 
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1rem; 
+    transition: all 0.3s ease;
+}
+ 
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    transform: translateY(-3px);
+}
+ 
+.navbar a.active {
+    background-color: var(--accent-color); 
+    color: white;
+}
+ 
+/* Animation for link hover */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+ 
+    50% {
+        transform: scale(1.05);
+    }
+ 
+    100% {
+        transform: scale(1);
+    }
+}
+ 
+.navbar a:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+ 
+/* Animation for page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+.navbar {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+ 
+/* Hero Section */
+.hero-accommodations {
+    background-image: url('sourceImg/malaysiaBackground.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative; /* For overlay */
+}
+ 
+.hero-accommodations::before { /* Overlay */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+ 
+.hero-accommodations h1 {
+    font-size: 3.5em; /* Slightly larger */
+    margin-bottom: 20px;
+    position: relative; /* To ensure it's above the overlay */
+    z-index: 1;
+}
+ 
+.hero-accommodations p {
+    font-size: 1.2em; /* Slightly larger */
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+ 
+/* Search and Filter */
+.search-filter {
+    padding: 30px 0;
+    background-color: #f5f5f5; 
+}
+ 
+.search-filter label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600; /* Slightly bolder labels */
+}
+ 
+.search-filter .form-control {
+    width: 80%; /* Make the slider wider */
+    margin: 0 auto;
+    border-radius: 5px; /* Rounded corners */
+}
+ 
+.search-filter .btn {
+    width: 100%;
+    border-radius: 5px;
+}
+ 
+/* Accommodations Grid - Fancy Design */
+#accommodations-grid {
+    padding: 50px 0;
+}
+ 
+#accommodations-grid h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.5em; /* Larger heading */
+}
+ 
+.accommodation-card {
+    border: none; 
+    border-radius: 10px; 
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+    position: relative; /* For overlay */
+}
+ 
+.accommodation-card::before { /* Overlay */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Transparent initially */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+ 
+.accommodation-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.3); /* Darker overlay on hover */
+}
+ 
+.accommodation-card:hover {
+    transform: translateY(-5px); 
+}
+ 
+.accommodation-card img {
+    height: 250px; 
+    object-fit: cover;
+    transition: transform 0.5s ease; 
+}
+ 
+.accommodation-card:hover img {
+    transform: scale(1.1); 
+}
+ 
+.accommodation-card .card-body {
+    padding: 20px;
+    background-color: #fff; 
+    position: relative; /* To ensure content is above overlay */
+    z-index: 1;
+}
+ 
+.accommodation-card .card-title {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 600;
+}
+ 
+.accommodation-card .card-text {
+    font-size: 0.9em;
+    color: #666;
+}
+ 
+.accommodation-card .btn-primary {
+    background-color: #f25a70; 
+    border-color: #f25a70;
+    border-radius: 5px; /* Rounded button corners */
+}
+ 
+/* Call to Action */
+.cta-accommodations {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 50px 0;
+}
+ 
+/* Footer */
+ 
+/* Footer */
+
+.site-footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+  }
+  
+  .logo img {
+    height: 70px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .copyright {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .copyright a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .cookies-preferences button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+  
+    .footer-section {
+        margin-bottom: 30px;
+    }
+  
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .logo,
+    .copyright,
+    .cookies-preferences {
+        margin-bottom: 15px;
+    }
+  }
+  
